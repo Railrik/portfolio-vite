@@ -1,5 +1,5 @@
 ---
-# Portfolio de [Votre Nom]
+# Portfolio de [Benjamin Ligny]
 Bienvenue sur mon portfolio personnel ! Je suis un développeur web passionné par la création d'expériences web interactives depuis 2009. Ce portfolio a été conçu pour mettre en valeur mes compétences, mon travail et mes projets.
 
 ## Description
@@ -8,7 +8,7 @@ Ce portfolio a été développé en utilisant le framework `Vite` et intégrant 
 
 Il met en avant mes compétences en développement web, tout en présentant une sélection de mes projets passés. De plus, il offre un aperçu de mes qualités et compétences en tant que développeur. Vous y trouverez également une section détaillée sur mes autres réalisations ainsi que mes centres d'intérêt et hobbies.
 
-__Lien du portfolio :)__
+__Lien du portfolio :link:__
 
 - __[ligny.pro](https://ligny.pro)__ 
 ---
@@ -48,6 +48,6 @@ npm run dev
 
 > :wink: par e-mail benjamin@ligny.pro
 >
-> :-) [via linkedin](https://www.linkedin.com/in/benjamin-ligny/)
+> :fist_right: [via linkedin](https://www.linkedin.com/in/benjamin-ligny/)
 
 ---
