@@ -3,6 +3,7 @@ import './Wrapper.scss';
 import Progress from '../Progress/Progress';
 import Logo from '../Logo/Logo';
 import Nav from '../Nav/Nav';
+import GithubBtn from '../Github-btn/GithubBtn';
 
 const Wrapper = () => {
     return (
@@ -10,6 +11,7 @@ const Wrapper = () => {
             <Progress />
             <Logo />
             <Nav />
+            <GithubBtn />
         </div>
     );
 };
