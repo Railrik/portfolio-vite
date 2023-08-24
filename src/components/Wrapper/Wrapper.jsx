@@ -5,6 +5,7 @@ import Logo from '../Logo/Logo';
 import Nav from '../Nav/Nav';
 import GithubBtn from '../Github-btn/GithubBtn';
 import Header from '../Header/Header';
+import Lang from '../Lang/Lang';
 
 const Wrapper = () => {
     return (
@@ -14,6 +15,7 @@ const Wrapper = () => {
             <Nav />
             <GithubBtn />
             <Header />
+            <Lang />
         </div>
     );
 };
