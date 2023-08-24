@@ -13,3 +13,14 @@
 :any-link {
 	color: var(--primary-color);
 }
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+::selection {
+	background: var(--accent-color);
+	color: var(--primary-color)
+}
