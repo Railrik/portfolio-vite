@@ -79,7 +79,7 @@ const Work = ({ scrub }) => {
 
 
     return (
-        <div>
+        <>
             <div className="section section-work" id="my-work">
                 <section className="demo-text">
                     <div className="wrapper-content text">Work</div>
@@ -162,7 +162,11 @@ const Work = ({ scrub }) => {
                     <div className="bg-empty" />
                 </section>
             </div>
-        </div>
+            <div className='section' style={{ height: "100vh" }}>section</div>
+            <div className='section' style={{ height: "100vh" }}>section</div>
+            <div className='section' style={{ height: "100vh" }}>section</div>
+            <div className='section' style={{ height: "100vh" }}>section</div>
+        </>
     );
 };
 
