@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Loader.scss';
 import logoWhite from '../../assets/img/logo-white.png';
 import imagesLoaded from 'imagesloaded';

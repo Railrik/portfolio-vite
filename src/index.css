@@ -24,3 +24,10 @@
 	background: var(--accent-color);
 	color: var(--primary-color)
 }
+
+ul {
+	list-style: none;
+}
+main {
+	margin-top: 100vh;
+}
