@@ -22,7 +22,7 @@ const Header = () => {
 
 
     return (
-        <header className="df ais jcc" id="main-header">
+        <header id="main-header">
             <video className="header-video" autoPlay muted loop>
                 <source src={headerVideo} type="video/mp4" />
             </video>
