@@ -7,7 +7,7 @@ const Header = () => {
 
     useEffect(() => {
         // Effet GSAP pour les éléments H1 et H2 du header
-        gsap.fromTo(["h1", "h2", "h3"], {
+        gsap.fromTo(["hgroup h1", "hgroup h2", "hgroup h3"], {
             opacity: 0,
             y: "-100vh",
         }, {
