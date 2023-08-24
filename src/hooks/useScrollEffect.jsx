@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { gsap } from 'gsap';
 
 const useScrollEffect = () => {
@@ -6,7 +7,7 @@ const useScrollEffect = () => {
     };
 
     const handleMouseWheel = (e) => {
-        scrollY -= e.deltaY * 0.3;
+        window.scrollY -= e.deltaY * 0.3;
     };
 
     const skewOnChange = (scrollPos) => {
@@ -16,29 +17,29 @@ const useScrollEffect = () => {
         });
     };
 
-    let scrollPos = 0;
-    let oldScrollPos = 0;
+    useEffect(() => {
+        let scrollPos = 0;
+        let oldScrollPos = 0;
 
-    const render = () => {
-        requestAnimationFrame(render);
+        const render = () => {
+            requestAnimationFrame(render);
+            // Calcul de la position de défilement
+            scrollPos = lerp(scrollPos, window.scrollY, 0.1);
 
-        // Calcul de la position de défilement
-        scrollPos = lerp(scrollPos, window.pageYOffset, 0.1);
+            if (Math.abs(scrollPos - oldScrollPos) > 0.1) {
+                skewOnChange(scrollPos - oldScrollPos);
+                oldScrollPos = scrollPos;
+            }
+        };
 
-        if (Math.abs(scrollPos - oldScrollPos) > 0.1) {
-            skewOnChange(scrollPos - oldScrollPos);
-            oldScrollPos = scrollPos;
-        }
-    };
+        window.addEventListener("wheel", handleMouseWheel);
+        render();
 
-    window.addEventListener("wheel", handleMouseWheel);
-
-    return render();
+        return () => {
+            window.removeEventListener("wheel", handleMouseWheel);
+        };
+    }, []);
 
 };
+
 export default useScrollEffect;
-
-
-
-
-
