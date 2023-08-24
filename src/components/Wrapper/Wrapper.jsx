@@ -4,6 +4,7 @@ import Progress from '../Progress/Progress';
 import Logo from '../Logo/Logo';
 import Nav from '../Nav/Nav';
 import GithubBtn from '../Github-btn/GithubBtn';
+import Header from '../Header/Header';
 
 const Wrapper = () => {
     return (
@@ -12,6 +13,7 @@ const Wrapper = () => {
             <Logo />
             <Nav />
             <GithubBtn />
+            <Header />
         </div>
     );
 };
