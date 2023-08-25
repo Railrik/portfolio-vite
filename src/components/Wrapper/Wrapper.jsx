@@ -13,6 +13,7 @@ import Work from '../Pages/Work/Work';
 
 import logoImg from '../../assets/img/logo.png';
 import logoWhiteImg from '../../assets/img/logo-white.png';
+import Skills from '../Pages/Skills/Skills';
 
 const Wrapper = () => {
     const [scrub, setScrub] = useState(1.2)
@@ -30,7 +31,6 @@ const Wrapper = () => {
         sections.forEach((section, index) => {
             const wrapperContent = section.querySelector(".wrapper-content");
             const isEven = index % 2 === 0;
-
             if (wrapperContent) {
                 const [x, xEnd] = isEven
                     ? [(wrapperContent.scrollWidth) * -1, 0]
@@ -68,38 +68,54 @@ const Wrapper = () => {
 
             const handleSectionEnter = (tl, isEven) => {
                 const targetBgColor = isEven ? '#212121' : '#beccd4';
+                const targetColor = isEven ? '#beccd4' : '#212121';
                 const targetLogoSrc = isEven ? logoWhiteImg : logoImg;
 
                 logoImage.src = targetLogoSrc;
 
-                tl.to("body", { backgroundColor: targetBgColor });
+                tl.to("body, nav", { backgroundColor: targetBgColor });
+                tl.to("nav ul li a", { color: targetColor });
+                tl.to(".demo-text .text", { css: { "-webkit-text-stroke": `2px ${targetColor}` } });
+                tl.to(".menu-button, #github-icon, #language-switch", { color: targetColor, border: `2px solid ${targetColor}` });
             };
 
             const handleSectionEnterBack = (tl, isEven) => {
                 const targetBgColor = isEven ? '#212121' : '#beccd4';
+                const targetColor = isEven ? '#beccd4' : '#212121';
                 const targetLogoSrc = isEven ? logoWhiteImg : logoImg;
 
                 logoImage.src = targetLogoSrc;
 
-                tl.to("body", { backgroundColor: targetBgColor });
+                tl.to("body, nav", { backgroundColor: targetBgColor });
+                tl.to("nav ul li a", { color: targetColor });
+                tl.to(".demo-text .text", { css: { "-webkit-text-stroke": `2px ${targetColor}` } });
+                tl.to(".menu-button, #github-icon, #language-switch", { color: targetColor, border: `2px solid ${targetColor}` });
             };
 
             const handleSectionLeave = (tl, isEven) => {
                 const targetBgColor = isEven ? '#beccd4' : '#212121';
+                const targetColor = isEven ? '#212121' : '#beccd4';
                 const targetLogoSrc = isEven ? logoImg : logoWhiteImg;
 
                 logoImage.src = targetLogoSrc;
 
-                tl.to("body", { backgroundColor: targetBgColor });
+                tl.to("body, nav", { backgroundColor: targetBgColor });
+                tl.to("nav ul li a", { color: targetColor });
+                tl.to(".demo-text .text", { css: { "-webkit-text-stroke": `2px ${targetColor}` } });
+                tl.to(".menu-button, #github-icon, #language-switch", { color: targetColor, border: `2px solid ${targetColor}` });
             };
 
             const handleSectionLeaveBack = (tl, isEven) => {
                 const targetBgColor = isEven ? '#beccd4' : '#212121';
+                const targetColor = isEven ? '#212121' : '#beccd4';
                 const targetLogoSrc = isEven ? logoImg : logoWhiteImg;
 
                 logoImage.src = targetLogoSrc;
 
-                tl.to("body", { backgroundColor: targetBgColor });
+                tl.to("body, nav", { backgroundColor: targetBgColor });
+                tl.to("nav ul li a", { color: targetColor });
+                tl.to(".demo-text .text", { css: { "-webkit-text-stroke": `2px ${targetColor}` } });
+                tl.to(".menu-button, #github-icon, #language-switch", { color: targetColor, border: `2px solid ${targetColor}` });
             };
 
         });
@@ -114,6 +130,8 @@ const Wrapper = () => {
             <Lang />
             <main>
                 <Work scrub={scrub} />
+                <Skills scrub={scrub} />
+                <section className='section' style={{ height: "100vh" }}></section>
             </main>
         </div>
     );

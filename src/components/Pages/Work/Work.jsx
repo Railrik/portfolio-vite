@@ -141,7 +141,7 @@ const Work = ({ scrub }) => {
             <div className="section">
                 <section className="other-creations">
                     <div className="bg-title">
-                        <h3>Autres créations</h3>
+                        <h3>Other creations</h3>
                     </div>
                     <div className="bg">
                         <div className="bg-cmachance" />
@@ -160,13 +160,11 @@ const Work = ({ scrub }) => {
                         <div className="bg-taxeApprentissage" />
                         <a href="https://cma-hautsdefrance.fr/versement-taxe-apprentissage/" target="_blank"><span className="dates">2020 - 2021</span>Taxe d'apprentissage<span className="project-link">PHP 7 | HTML | CSS | JS | API</span></a>
                     </div>
-                    <div className="bg-empty" />
                 </section>
+                <div className="bg-empty" />
+
             </div>
-            <div className='section' style={{ height: "100vh" }}>section</div>
-            <div className='section' style={{ height: "100vh" }}>section</div>
-            <div className='section' style={{ height: "100vh" }}>section</div>
-            <div className='section' style={{ height: "100vh" }}>section</div>
+
         </>
     );
 };
