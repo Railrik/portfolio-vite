@@ -62,7 +62,7 @@ const Skills = ({ scrub }) => {
             <section className="demo-text">
                 <div className="wrapper-content text">Skills</div>
             </section>
-            <div id="text-anim">
+            <div id="text-anim" className='lerp'>
                 <ul>
                     {skillsList.map((skill, index) => (
                         <li key={index}>

@@ -34,7 +34,10 @@
     transition: opacity 0.3s, transform 0.3s;
   }
   
-  
   .gallery-type-2 li a:hover:before {
     opacity: 1;
   }
+
+  .is-compact .fancybox__footer .fancybox__caption {
+    text-align: center;
+}

@@ -14,7 +14,7 @@ const Hobbies = () => {
             <section className="demo-text">
                 <div className="wrapper-content text">Hobbies</div>
             </section>
-            <section className="demo-gallery gallery-type-2">
+            <section className="demo-gallery gallery-type-2 lerp">
                 <Fancybox
                     options={{
                         Carousel: {
