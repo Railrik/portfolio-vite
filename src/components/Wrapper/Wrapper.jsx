@@ -15,6 +15,7 @@ import logoImg from '../../assets/img/logo.png';
 import logoWhiteImg from '../../assets/img/logo-white.png';
 import Skills from '../Pages/Skills/Skills';
 import useScrollEffect from '../../hooks/useScrollEffect';
+import Qualities from '../Pages/Qualities/Qualities';
 
 const Wrapper = () => {
     const [scrub, setScrub] = useState(1.2)
@@ -138,7 +139,7 @@ const Wrapper = () => {
             <main>
                 <Work scrub={scrub} />
                 <Skills scrub={scrub} />
-                <section className='section' style={{ height: "100vh" }}></section>
+                <Qualities />
             </main>
         </div>
     );

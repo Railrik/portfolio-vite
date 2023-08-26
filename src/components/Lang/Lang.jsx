@@ -108,6 +108,7 @@ const Lang = () => {
     };
 
     const [currentLanguage, setCurrentLanguage] = useState('fr');
+    const styleTag = document.createElement("style");
 
     const updateTextContent = () => {
         const loaderText = document.querySelector(".loader h3");
@@ -121,6 +122,13 @@ const Lang = () => {
         menuItems[2].textContent = text.menuItems.myHobbies[currentLanguage];
         menuItems[3].textContent = text.menuItems.aboutMe[currentLanguage];
         menuItems[4].textContent = text.menuItems.contact[currentLanguage];
+
+        const spinKeyframesCSS = Object.entries(text.spinKeyframes).map(([key, value]) => {
+            return `${key}% { content: "${value[currentLanguage]}"; }`;
+        }).join("\n");
+        styleTag.textContent = `@keyframes spin {\n${spinKeyframesCSS}\n}`;
+        document.head.appendChild(styleTag);
+
     };
 
 
@@ -150,12 +158,12 @@ const Lang = () => {
     }, []);
 
     useEffect(() => {
-        gsap.to(".loader h3, hgroup h3, .link a", {
+        gsap.to(".loader h3, hgroup h3, .link a , #spin", {
             opacity: 0,
             duration: 0.3,
             onComplete: () => {
                 updateTextContent();
-                gsap.to(".loader h3, hgroup h3, .link a", {
+                gsap.to(".loader h3, hgroup h3, .link a , #spin", {
                     opacity: 1,
                     duration: 0.3
                 });
