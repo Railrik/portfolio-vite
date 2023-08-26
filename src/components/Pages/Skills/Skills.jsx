@@ -55,7 +55,7 @@ const Skills = ({ scrub }) => {
     }, []);
 
     return (
-        <div className="section section-skills" id="my-skills">
+        <div className="section section-skills" id="skills">
             <section className="demo-text">
                 <div className="wrapper-content text">Skills</div>
             </section>

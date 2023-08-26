@@ -1,0 +1,21 @@
+#spin {
+	text-transform: uppercase;
+	font-size: 10vw;
+	color: transparent;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-stroke: 2px var(--primary-color);
+}
+
+#spin:after {
+	content: "";
+	animation: spin 7s linear infinite;
+}
+
+.container-qualities {
+	position: relative;
+	max-width: 100vw;
+	text-align: center;
+	height: 80vh;
+	line-height: 50vh;
+	margin-top: 10vh;
+}

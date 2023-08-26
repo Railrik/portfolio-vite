@@ -82,9 +82,9 @@ const Nav = () => {
         <>
             <nav id="nav-main" className="skew" ref={navMainRef}>
                 <ul>
-                    <li className="link"><a href="#my-work">Work</a></li>
-                    <li className="link"><a href="#my-skills">Skills</a></li>
-                    <li className="link"><a href="#about-me">Qualities</a></li>
+                    <li className="link"><a href="#work">Work</a></li>
+                    <li className="link"><a href="#skills">Skills</a></li>
+                    <li className="link"><a href="#qualities">Qualities</a></li>
                     <li className="link"><a href="#my-hobbies">Hobbies</a></li>
                     <li className="link"><a href="#contact">contact</a></li>
                 </ul>

@@ -79,7 +79,7 @@ const Work = ({ scrub }) => {
 
     return (
         <>
-            <div className="section section-work" id="my-work">
+            <div className="section section-work" id="work">
                 <section className="demo-text">
                     <div className="wrapper-content text">Work</div>
                 </section>
