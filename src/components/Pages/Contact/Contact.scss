@@ -11,6 +11,42 @@ $background-color_2: var(--accent-color);
 	height: 100vh;
 	text-align: center;
 }
+
+
+.contact-btns button,
+.contact-btns button::after {
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.contact-btns  button {
+	cursor: pointer;
+	background: none;
+	border: 3px solid var(--primary-color);
+	border-radius: 5px;
+	color: var(--primary-color);
+	display: block;
+	font-size: 1.6em;
+	font-weight: bold;
+	padding: 2rem;
+	position: relative;
+	text-transform: uppercase;
+}
+
+.contact-btns  button::before,
+ button::after {
+	background: var(--primary-color);
+	content: '';
+	position: absolute;
+	z-index: -1;
+}
+
+.contact-btns  button:hover {
+	color: var(--accent-color);
+}
+
 .contact-btns {
 	button {
 		display: block;
@@ -54,6 +90,8 @@ $background-color_2: var(--accent-color);
 	}
 }
 .btn-4 {
+    background: var(--accent-color);
+
 	&::before {
 		height: 100%;
 		left: 0;
