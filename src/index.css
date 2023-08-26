@@ -21,7 +21,7 @@
 	color: var(--primary-color)
 }
 body {
-	background-color: var(--primary-color);
+	background-color: var(--accent-color);
 }
 ul {
 	list-style: none;
@@ -29,3 +29,14 @@ ul {
 main {
 	margin-top: 100vh;
 }
+
+#cursor {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background: white;
+	border-radius: 50%;
+	mix-blend-mode: difference;
+	pointer-events: none;
+	transition: transform .15s ease-in-out;
+  }

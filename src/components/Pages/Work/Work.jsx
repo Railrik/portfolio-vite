@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import useScrollEffect from '../../../hooks/useScrollEffect'; // Importez le hook personnalisé
 
 import './Work.scss';
 import peopixsMainVideo from '../../../assets/videos/work/peopixs/peopixs-main.mp4';
@@ -78,7 +77,6 @@ const Work = ({ scrub }) => {
         });
     }, [])
 
-    useScrollEffect();
     return (
         <>
             <div className="section section-work" id="my-work">

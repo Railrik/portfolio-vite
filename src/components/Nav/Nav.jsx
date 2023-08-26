@@ -3,9 +3,35 @@ import './Nav.scss';
 import { gsap } from 'gsap';
 
 const Nav = () => {
+
     const [toggle, setToggle] = useState(false);
     const menuButtonRef = useRef(null);
     const navMainRef = useRef(null);
+    useEffect(() => {
+        // Sélectionnez tous les liens avec la classe "link"
+        const navLinks = document.querySelectorAll('#nav-main a');
+
+        // Parcourez chaque lien
+        navLinks.forEach(link => {
+            // Ajoutez un gestionnaire d'événement au clic
+            link.addEventListener('click', event => {
+                event.preventDefault(); // Empêche le comportement de lien par défaut
+                setToggle(false);
+                const targetId = link.getAttribute('href'); // Récupérez l'attribut href (ancre)
+                const targetElement = document.querySelector(targetId); // Sélectionnez l'élément cible
+
+                if (targetElement) {
+                    // Faites défiler jusqu'à l'élément cible
+                    setTimeout(() => {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth' // Faites défiler en douceur
+                        });
+                    }, 1500);
+                }
+            });
+        });
+    }, [])
+
 
     // Gère le clic sur le bouton de menu
     const handleOnClick = () => {

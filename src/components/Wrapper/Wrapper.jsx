@@ -14,6 +14,7 @@ import Work from '../Pages/Work/Work';
 import logoImg from '../../assets/img/logo.png';
 import logoWhiteImg from '../../assets/img/logo-white.png';
 import Skills from '../Pages/Skills/Skills';
+import useScrollEffect from '../../hooks/useScrollEffect';
 
 const Wrapper = () => {
     const [scrub, setScrub] = useState(1.2)
@@ -22,6 +23,7 @@ const Wrapper = () => {
         gsap.registerPlugin(ScrollTrigger);
         setupSectionsAnimations();
         setupSectionsChangeBgColor();
+
     }, []);
 
     // Configuration des animations de défilement des sections
@@ -64,6 +66,10 @@ const Wrapper = () => {
                     onLeave: () => handleSectionLeave(tl, isEven),
                     onLeaveBack: () => handleSectionLeaveBack(tl, isEven),
                 },
+                defaults: {
+                    duration: .2, ease: "power3.in",
+                },
+
             });
 
             const handleSectionEnter = (tl, isEven) => {
@@ -73,10 +79,10 @@ const Wrapper = () => {
 
                 logoImage.src = targetLogoSrc;
 
-                tl.to("body, nav", { backgroundColor: targetBgColor });
-                tl.to("nav ul li a", { color: targetColor });
-                tl.to(".demo-text .text", { css: { "-webkit-text-stroke": `2px ${targetColor}` } });
-                tl.to(".menu-button, #github-icon, #language-switch", { color: targetColor, border: `2px solid ${targetColor}` });
+                tl.to("body, nav", { backgroundColor: targetBgColor })
+                    .to("nav ul li a, #text-anim ul li", { color: targetColor })
+                    .to(".demo-text .text", { css: { "-webkit-text-stroke": `2px ${targetColor}` } })
+                    .to(".menu-button, #github-icon, #language-switch", { color: targetColor, border: `2px solid ${targetColor}` });
             };
 
             const handleSectionEnterBack = (tl, isEven) => {
@@ -86,10 +92,10 @@ const Wrapper = () => {
 
                 logoImage.src = targetLogoSrc;
 
-                tl.to("body, nav", { backgroundColor: targetBgColor });
-                tl.to("nav ul li a", { color: targetColor });
-                tl.to(".demo-text .text", { css: { "-webkit-text-stroke": `2px ${targetColor}` } });
-                tl.to(".menu-button, #github-icon, #language-switch", { color: targetColor, border: `2px solid ${targetColor}` });
+                tl.to("body, nav", { backgroundColor: targetBgColor })
+                    .to("nav ul li a,#text-anim ul li", { color: targetColor })
+                    .to(".demo-text .text", { css: { "-webkit-text-stroke": `2px ${targetColor}` } })
+                    .to(".menu-button, #github-icon, #language-switch", { color: targetColor, border: `2px solid ${targetColor}` });
             };
 
             const handleSectionLeave = (tl, isEven) => {
@@ -99,10 +105,10 @@ const Wrapper = () => {
 
                 logoImage.src = targetLogoSrc;
 
-                tl.to("body, nav", { backgroundColor: targetBgColor });
-                tl.to("nav ul li a", { color: targetColor });
-                tl.to(".demo-text .text", { css: { "-webkit-text-stroke": `2px ${targetColor}` } });
-                tl.to(".menu-button, #github-icon, #language-switch", { color: targetColor, border: `2px solid ${targetColor}` });
+                tl.to("body, nav", { backgroundColor: targetBgColor })
+                    .to("nav ul li a,#text-anim ul li", { color: targetColor })
+                    .to(".demo-text .text", { css: { "-webkit-text-stroke": `2px ${targetColor}` } })
+                    .to(".menu-button, #github-icon, #language-switch", { color: targetColor, border: `2px solid ${targetColor}` });
             };
 
             const handleSectionLeaveBack = (tl, isEven) => {
@@ -112,14 +118,15 @@ const Wrapper = () => {
 
                 logoImage.src = targetLogoSrc;
 
-                tl.to("body, nav", { backgroundColor: targetBgColor });
-                tl.to("nav ul li a", { color: targetColor });
-                tl.to(".demo-text .text", { css: { "-webkit-text-stroke": `2px ${targetColor}` } });
-                tl.to(".menu-button, #github-icon, #language-switch", { color: targetColor, border: `2px solid ${targetColor}` });
+                tl.to("body, nav", { backgroundColor: targetBgColor })
+                    .to("nav ul li a,#text-anim ul li", { color: targetColor })
+                    .to(".demo-text .text", { css: { "-webkit-text-stroke": `2px ${targetColor}` } })
+                    .to(".menu-button, #github-icon, #language-switch", { color: targetColor, border: `2px solid ${targetColor}` });
             };
 
         });
     };
+    useScrollEffect();
     return (
         <div className="wrapper">
             <Progress />
