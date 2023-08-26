@@ -122,6 +122,11 @@ const Lang = () => {
         menuItems[2].textContent = text.menuItems.myHobbies[currentLanguage];
         menuItems[3].textContent = text.menuItems.aboutMe[currentLanguage];
         menuItems[4].textContent = text.menuItems.contact[currentLanguage];
+        document.querySelector(".section-work .demo-text .text").textContent = text.menuItems.myWork[currentLanguage];
+        document.querySelector(".other-creations div h3").textContent = text.otherCreations[currentLanguage];
+        document.querySelector(".section-skills .demo-text .text").textContent = text.menuItems.mySkills[currentLanguage];
+        document.querySelector(".section-qualities .demo-text .text").textContent = text.menuItems.aboutMe[currentLanguage];
+        document.querySelector(".section-hobbies .demo-text .text").textContent = text.menuItems.myHobbies[currentLanguage];
 
         const spinKeyframesCSS = Object.entries(text.spinKeyframes).map(([key, value]) => {
             return `${key}% { content: "${value[currentLanguage]}"; }`;
@@ -158,12 +163,12 @@ const Lang = () => {
     }, []);
 
     useEffect(() => {
-        gsap.to(".loader h3, hgroup h3, .link a , #spin", {
+        gsap.to(".loader h3, hgroup h3, .link a , #spin, .demo-text .text, .other-creations div h3", {
             opacity: 0,
             duration: 0.3,
             onComplete: () => {
                 updateTextContent();
-                gsap.to(".loader h3, hgroup h3, .link a , #spin", {
+                gsap.to(".loader h3, hgroup h3, .link a , #spin, .demo-text .text, .other-creations div h3", {
                     opacity: 1,
                     duration: 0.3
                 });
