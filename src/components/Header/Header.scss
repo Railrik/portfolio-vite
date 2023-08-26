@@ -71,34 +71,42 @@ header {
         opacity: 0.8;
         filter: alpha(opacity=80);
       }
-  
-      .mouse {
+      > a {
         position: relative;
-        display: block;
+      }
+      .mouse {
+        position: fixed;
+        left: 50%;
+        bottom: 7rem; 
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centrer horizontalement */
+        justify-content: flex-end; /* Centrer verticalement en bas */
         width: 25px;
-        height: 45px;
-        margin: 0 auto 20px;
+        height: 50px;
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
         border: 1px solid var(--primary-color);
         border-radius: 23px;
-  
+        z-index: 1;
+    
         > * {
-          position: absolute;
-          display: block;
-          top: 29%;
-          left: 50%;
-          width: 8px;
-          height: 8px;
-          margin: -4px 0 0 -4px;
-          background: var(--primary-color);
-          border-radius: 50%;
-          -webkit-animation: ani-mouse 2.5s linear infinite;
-          -moz-animation: ani-mouse 2.5s linear infinite;
-          animation: ani-mouse 2.5s linear infinite;
+            position: absolute;
+            display: block;
+            width: 8px;
+            height: 8px;
+            margin: 0 auto; /* Centrer horizontalement */
+            background: var(--primary-color);
+            border-radius: 50%;
+            -webkit-animation: ani-mouse 2.5s linear infinite;
+            -moz-animation: ani-mouse 2.5s linear infinite;
+            animation: ani-mouse 2.5s linear infinite;
         }
-      }
+    }
+    
+    
     }
   
     /* Bureau (Desktop) */
@@ -117,6 +125,11 @@ header {
           font-size: 3vw;
         }
       }
+      .scroll-btn {
+      .mouse {
+        bottom: 2rem; 
+      }
+    }
     }
   
     @-webkit-keyframes ani-mouse {
