@@ -1,0 +1,39 @@
+.gallery-type-2 li {
+	position: relative;
+	flex-shrink: 0;
+	width: 21vw;
+}
+
+.gallery-type-2 img {
+	border-radius: 10px;
+	width: 20vw;
+	height: 70vh;
+	object-fit: cover;
+	border-radius: 5px;
+	z-index: -1;
+	background: var(--primary-color);
+}
+
+.gallery-type-2 li a:before {
+    text-align: center;
+    content: attr(data-caption);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 70vh;
+    width: 20vw;
+    background-color: rgba(195, 209, 216, 0.5);
+    color: var(--primary-color);
+    font-size: 3vw;
+    border-radius: 5px;
+    opacity: 0;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    transition: opacity 0.3s, transform 0.3s;
+  }
+  
+  
+  .gallery-type-2 li a:hover:before {
+    opacity: 1;
+  }

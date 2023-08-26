@@ -22,6 +22,7 @@
 }
 body {
 	background-color: var(--accent-color);
+	overflow-x: hidden;
 }
 ul {
 	list-style: none;
@@ -39,4 +40,9 @@ main {
 	mix-blend-mode: difference;
 	pointer-events: none;
 	transition: transform .15s ease-in-out;
+  }
+
+  .fancybox__slide.has-image>.fancybox__content {
+	height: 100%!important;
+	width: 100%!important;
   }

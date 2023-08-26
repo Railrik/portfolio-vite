@@ -16,6 +16,7 @@ import logoWhiteImg from '../../assets/img/logo-white.png';
 import Skills from '../Pages/Skills/Skills';
 import useScrollEffect from '../../hooks/useScrollEffect';
 import Qualities from '../Pages/Qualities/Qualities';
+import Hobbies from '../Pages/Hobbies/Hobbies';
 
 const Wrapper = () => {
     const [scrub, setScrub] = useState(1.2)
@@ -140,6 +141,7 @@ const Wrapper = () => {
                 <Work scrub={scrub} />
                 <Skills scrub={scrub} />
                 <Qualities />
+                <Hobbies />
             </main>
         </div>
     );
