@@ -50,7 +50,7 @@ const Skills = ({ scrub }) => {
 
             tl.to(trigger, {
                 scale: 1,
-                opacity: 0.1,
+                opacity: 0.4,
                 duration: 0.5,
             });
         });

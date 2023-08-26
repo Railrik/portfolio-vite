@@ -119,7 +119,7 @@ $background-color_1: rgba(33, 33, 33, 0.9);
 	.text {
 		white-space: nowrap;
 		text-transform: uppercase;
-		font-size: 15vw;
+		font-size: 12vw;
 		font-weight: 700;
 		color: $color_2;
 		-webkit-font-smoothing: antialiased;
@@ -270,7 +270,7 @@ $background-color_1: rgba(33, 33, 33, 0.9);
 }
 @media (min-width: 992px) {
 	.demo-text .text {
-		font-size: 12vw;
+		font-size: 10vw;
 	}
 	.other-creations {
 		div {
