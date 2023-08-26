@@ -119,8 +119,8 @@ const Lang = () => {
         jobTitle.textContent = text.job[currentLanguage];
         menuItems[0].textContent = text.menuItems.myWork[currentLanguage];
         menuItems[1].textContent = text.menuItems.mySkills[currentLanguage];
-        menuItems[2].textContent = text.menuItems.myHobbies[currentLanguage];
-        menuItems[3].textContent = text.menuItems.aboutMe[currentLanguage];
+        menuItems[2].textContent = text.menuItems.aboutMe[currentLanguage];
+        menuItems[3].textContent = text.menuItems.myHobbies[currentLanguage];
         menuItems[4].textContent = text.menuItems.contact[currentLanguage];
         document.querySelector(".section-work .demo-text .text").textContent = text.menuItems.myWork[currentLanguage];
         document.querySelector(".other-creations div h3").textContent = text.otherCreations[currentLanguage];
