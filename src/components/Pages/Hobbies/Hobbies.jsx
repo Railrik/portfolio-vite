@@ -10,9 +10,9 @@ import carrousel_5 from '../../../assets/img/carrousel/5.jpg';
 
 const Hobbies = () => {
     return (
-        <div className="section section-hobbies" id="my-hobbies">
+        <div className="section section-hobbies" id="hobbies">
             <section className="demo-text">
-                <div className="wrapper-content text">My Hobbies</div>
+                <div className="wrapper-content text">Hobbies</div>
             </section>
             <section className="demo-gallery gallery-type-2">
                 <Fancybox

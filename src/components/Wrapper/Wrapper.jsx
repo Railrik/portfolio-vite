@@ -17,6 +17,7 @@ import Skills from '../Pages/Skills/Skills';
 import useScrollEffect from '../../hooks/useScrollEffect';
 import Qualities from '../Pages/Qualities/Qualities';
 import Hobbies from '../Pages/Hobbies/Hobbies';
+import Contact from '../Pages/Contact/Contact';
 
 const Wrapper = () => {
     const [scrub, setScrub] = useState(1.2)
@@ -139,9 +140,12 @@ const Wrapper = () => {
             <Lang />
             <main>
                 <Work scrub={scrub} />
+                <section></section>
                 <Skills scrub={scrub} />
+                <section></section>
                 <Qualities />
                 <Hobbies />
+                <Contact />
             </main>
         </div>
     );

@@ -85,7 +85,7 @@ const Nav = () => {
                     <li className="link"><a href="#work">Work</a></li>
                     <li className="link"><a href="#skills">Skills</a></li>
                     <li className="link"><a href="#qualities">Qualities</a></li>
-                    <li className="link"><a href="#my-hobbies">Hobbies</a></li>
+                    <li className="link"><a href="#hobbies">Hobbies</a></li>
                     <li className="link"><a href="#contact">contact</a></li>
                 </ul>
             </nav>
