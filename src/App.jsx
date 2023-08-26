@@ -38,8 +38,10 @@ function App() {
 
   return (
     <div className="app">
-      <Loader onLoadingComplete={handleLoadingComplete} />
-      <Wrapper />
+      <>
+        <Loader onLoadingComplete={handleLoadingComplete} />
+        <Wrapper />
+      </>
     </div>
   );
 }

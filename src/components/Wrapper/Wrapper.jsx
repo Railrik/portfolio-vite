@@ -86,7 +86,11 @@ const Wrapper = () => {
                 tl.to("body, nav", { backgroundColor: targetBgColor })
                     .to("nav ul li a, #text-anim ul li", { color: targetColor })
                     .to(".demo-text .text", { css: { "-webkit-text-stroke": `2px ${targetColor}` } })
-                    .to(".menu-button, #github-icon, #language-switch", { color: targetColor, border: `2px solid ${targetColor}` });
+                gsap.to(".menu-button, #github-icon, #language-switch", { color: targetColor, border: `2px solid ${targetColor}` })
+                gsap.to(".progress-info-fill", {
+                    backgroundImage: `linear-gradient(${targetColor}, ${targetColor})`,
+                });
+
             };
 
             const handleSectionEnterBack = (tl, isEven) => {
@@ -99,7 +103,10 @@ const Wrapper = () => {
                 tl.to("body, nav", { backgroundColor: targetBgColor })
                     .to("nav ul li a,#text-anim ul li", { color: targetColor })
                     .to(".demo-text .text", { css: { "-webkit-text-stroke": `2px ${targetColor}` } })
-                    .to(".menu-button, #github-icon, #language-switch", { color: targetColor, border: `2px solid ${targetColor}` });
+                gsap.to(".menu-button, #github-icon, #language-switch", { color: targetColor, border: `2px solid ${targetColor}` })
+                gsap.to(".progress-info-fill", {
+                    backgroundImage: `linear-gradient(${targetColor}, ${targetColor})`,
+                });
             };
 
             const handleSectionLeave = (tl, isEven) => {
@@ -112,7 +119,10 @@ const Wrapper = () => {
                 tl.to("body, nav", { backgroundColor: targetBgColor })
                     .to("nav ul li a,#text-anim ul li", { color: targetColor })
                     .to(".demo-text .text", { css: { "-webkit-text-stroke": `2px ${targetColor}` } })
-                    .to(".menu-button, #github-icon, #language-switch", { color: targetColor, border: `2px solid ${targetColor}` });
+                gsap.to(".menu-button, #github-icon, #language-switch", { color: targetColor, border: `2px solid ${targetColor}` })
+                gsap.to(".progress-info-fill", {
+                    backgroundImage: `linear-gradient(${targetColor}, ${targetColor})`,
+                });
             };
 
             const handleSectionLeaveBack = (tl, isEven) => {
@@ -125,7 +135,10 @@ const Wrapper = () => {
                 tl.to("body, nav", { backgroundColor: targetBgColor })
                     .to("nav ul li a,#text-anim ul li", { color: targetColor })
                     .to(".demo-text .text", { css: { "-webkit-text-stroke": `2px ${targetColor}` } })
-                    .to(".menu-button, #github-icon, #language-switch", { color: targetColor, border: `2px solid ${targetColor}` });
+                gsap.to(".menu-button, #github-icon, #language-switch", { color: targetColor, border: `2px solid ${targetColor}` })
+                gsap.to(".progress-info-fill", {
+                    backgroundImage: `linear-gradient(${targetColor}, ${targetColor})`,
+                });
             };
 
         });
@@ -133,7 +146,7 @@ const Wrapper = () => {
     useScrollEffect();
     return (
         <div className="wrapper">
-            <Progress />
+            <Progress scrub={scrub} />
             <Logo />
             <Nav />
             <GithubBtn />

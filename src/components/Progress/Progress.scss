@@ -1,7 +1,7 @@
 .progress-info {
     position: fixed;
     bottom: 0;
-    font-size: 2vw;
+    font-size: 20vw;
     left: 0;
     right: 0;
     display: flex;
@@ -40,6 +40,12 @@
     > .progress-info-fill-2 {
       -webkit-text-fill-color: rgba(255, 255, 255, 0.1);
       background-image: linear-gradient(var(--primary-color), var(--primary-color));
+    }
+  }
+
+  @media (min-width: 992px) {
+    .progress-info {
+      font-size: 5vw;
     }
   }
   
