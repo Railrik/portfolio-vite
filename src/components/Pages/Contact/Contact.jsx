@@ -18,8 +18,8 @@ const Contact = () => {
     useEffect(() => {
 
 
-        gsap.set('.btn-contact-left', { x: '-100vw' });
-        gsap.set('.btn-contact-right', { x: '100vw' });
+        gsap.set('.btn-contact-left', { x: '100vw' });
+        gsap.set('.btn-contact-right', { x: '-100vw' });
 
         gsap.to(".btn-contact-left", {
             x: 0,

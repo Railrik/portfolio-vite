@@ -61,6 +61,7 @@ const Wrapper = () => {
             const isEven = index % 2 === 0;
             const tl = gsap.timeline({
                 scrollTrigger: {
+                    markers: false,
                     trigger: section,
                     start: "top center",
                     end: "bottom center",
@@ -140,9 +141,7 @@ const Wrapper = () => {
             <Lang />
             <main>
                 <Work scrub={scrub} />
-                <section></section>
                 <Skills scrub={scrub} />
-                <section></section>
                 <Qualities />
                 <Hobbies />
                 <Contact />

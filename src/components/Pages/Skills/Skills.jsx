@@ -23,16 +23,19 @@ const Skills = ({ scrub }) => {
     gsap.registerPlugin(ScrollTrigger);
 
     useEffect(() => {
-        gsap.set('#text-anim ul li', { scale: 1, opacity: 0 });
+        gsap.set('#text-anim ul li', { scale: 0, opacity: 0 });
 
         const triggers = document.querySelectorAll('#text-anim ul li');
 
         triggers.forEach((trigger, index) => {
             const tl = gsap.timeline({
+
                 scrollTrigger: {
                     trigger: trigger,
-                    start: 'top 50%', // Commencez l'animation lorsque le début de l'élément atteint 80% de la vue
-                    end: 'bottom 50%', // Terminez l'animation lorsque le début de l'élément atteint 20% de la vue
+                    delay: index * 0.2,
+
+                    start: 'top center', // Commencez l'animation lorsque le début de l'élément atteint 80% de la vue
+                    end: 'bottom center', // Terminez l'animation lorsque le début de l'élément atteint 20% de la vue
                     scrub: scrub,
                 },
                 ease: "power3.out",
@@ -42,7 +45,7 @@ const Skills = ({ scrub }) => {
             tl.to(trigger, {
                 scale: 2,
                 opacity: 1,
-                duration: 0.5,
+                duration: 0.8,
             });
 
             tl.to(trigger, {
@@ -59,7 +62,7 @@ const Skills = ({ scrub }) => {
             <section className="demo-text">
                 <div className="wrapper-content text">Skills</div>
             </section>
-            <section id="text-anim">
+            <div id="text-anim">
                 <ul>
                     {skillsList.map((skill, index) => (
                         <li key={index}>
@@ -67,7 +70,7 @@ const Skills = ({ scrub }) => {
                         </li>
                     ))}
                 </ul>
-            </section>
+            </div>
         </div>
     );
 };
