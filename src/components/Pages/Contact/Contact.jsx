@@ -5,59 +5,61 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './Contact.scss';
 
 const Contact = () => {
+    useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        const btnContactLeft = document.querySelector('.btn-contact-left');
+        const btnContactRight = document.querySelector('.btn-contact-right');
+
+        if (btnContactLeft && btnContactRight) {
+            gsap.set(btnContactLeft, { x: '100vw' });
+            gsap.set(btnContactRight, { x: '-100vw' });
+
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".section-contact",
+                    start: "top center",
+                    end: "bottom bottom",
+                    toggleActions: "play none none reverse",
+                },
+            });
+
+            tl.to(btnContactLeft, {
+                x: 0,
+            });
+
+            tl.to(btnContactRight, {
+                x: 0,
+            });
+
+            return () => {
+                tl.kill();
+            };
+        }
+    }, []);
+
     const redirectToLinkedIn = () => {
-        // Rediriger vers la page LinkedIn
         window.open('https://www.linkedin.com/in/benjamin-ligny/', '_blank');
     };
 
     const composeEmail = () => {
-        // Ouvrir une fenêtre de composition d'e-mail
         window.open('mailto:benjamin@ligny.pro');
     };
 
-    useEffect(() => {
-
-
-        gsap.set('.btn-contact-left', { x: '100vw' });
-        gsap.set('.btn-contact-right', { x: '-100vw' });
-
-        gsap.to(".btn-contact-left", {
-            x: 0,
-            scrollTrigger: {
-                trigger: ".section-contact",
-                start: "top center",
-                end: "bottom bottom",
-                toggleActions: "play none none reverse",
-            },
-        });
-        gsap.to(".btn-contact-right", {
-            x: 0,
-            scrollTrigger: {
-                trigger: ".section-contact",
-                start: "top center",
-                end: "bottom bottom",
-                toggleActions: "play none none reverse",
-            },
-        });
-    }, []);
-
     return (
-        <>
-            <div className="section section-contact" id="contact">
-                <section className="demo-text">
-                    <div className="wrapper-content text">Contact</div>
-                </section>
-                <div className="contact-btns">
-                    <button className="btn-3 btn-contact-left" onClick={redirectToLinkedIn}>
-                        Linkedin
-                    </button>
-                    <button className="btn-4 btn-contact-right" onClick={composeEmail}>
-                        E-mail
-                    </button>
-                </div>
+        <div className="section section-contact" id="contact">
+            <section className="demo-text">
+                <h2 className="wrapper-content text">Contact</h2>
+            </section>
+            <div className="contact-btns">
+                <button className="btn-3 btn-contact-left" onClick={redirectToLinkedIn}>
+                    Linkedin
+                </button>
+                <button className="btn-4 btn-contact-right" onClick={composeEmail}>
+                    E-mail
+                </button>
             </div>
-
-        </>
+        </div>
     );
 };
 

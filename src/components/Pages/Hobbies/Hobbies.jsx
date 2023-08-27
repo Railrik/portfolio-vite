@@ -12,16 +12,14 @@ const Hobbies = () => {
     return (
         <div className="section section-hobbies" id="hobbies">
             <section className="demo-text">
-                <div className="wrapper-content text">Hobbies</div>
+                <h2 className="wrapper-content text">Hobbies</h2>
             </section>
             <section className="demo-gallery gallery-type-2 lerp">
                 <Fancybox
                     options={{
                         Carousel: {
-                            infinite: false,
+                            // infinite: false,
                         },
-                        // wheel: false,
-
                     }}
                 >
                     <ul className="wrapper-content">

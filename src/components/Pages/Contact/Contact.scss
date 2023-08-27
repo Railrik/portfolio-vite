@@ -3,114 +3,111 @@ $color_2: var(--primary-color);
 $background-color_1: var(--primary-color);
 $background-color_2: var(--accent-color);
 
-/* BUTTON 4 */
 .section-contact {
-	display: block;
-	position: relative;
-	width: 100%;
-	height: 100vh;
-	text-align: center;
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
 }
-
 
 .contact-btns button,
 .contact-btns button::after {
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	-o-transition: all 0.3s;
-	transition: all 0.3s;
+    transition: all 0.3s;
 }
 
-.contact-btns  button {
-	cursor: pointer;
-	background: none;
-	border: 3px solid var(--primary-color);
-	border-radius: 5px;
-	color: var(--primary-color);
-	display: block;
-	font-size: 1.6em;
-	font-weight: bold;
-	padding: 2rem;
-	position: relative;
-	text-transform: uppercase;
+.contact-btns button {
+    cursor: pointer;
+    background: none;
+    border: 3px solid var(--primary-color);
+    border-radius: 5px;
+    color: var(--primary-color);
+    display: block;
+    font-size: 1.6em;
+    font-weight: bold;
+    padding: 2rem;
+    position: relative;
+    text-transform: uppercase;
 }
 
-.contact-btns  button::before,
- button::after {
-	background: var(--primary-color);
-	content: '';
-	position: absolute;
-	z-index: -1;
+.contact-btns button::before,
+.contact-btns button::after {
+    background: var(--primary-color);
+    content: '';
+    position: absolute;
+    z-index: -1;
 }
 
-.contact-btns  button:hover {
-	color: var(--accent-color);
+.contact-btns button:hover {
+    color: var(--accent-color);
 }
 
 .contact-btns {
-	button {
-		display: block;
-		margin: 1vh 0 0 0;
-		width: 90vw;
-		margin: auto;
-		margin-top: 5vw;
-	}
-	width: 100vw;
-	text-align: center;
-}
-.btn-3 {
-	background: var(--accent-color);
-	&::after {
-		height: 0;
-		left: 50%;
-		top: 50%;
-		width: 0;
-	}
-	&:hover {
-		&:after {
-			height: 100%;
-			left: 0;
-			top: 0;
-			width: 100%;
-		}
-	}
-}
-.btn-svg {
-	color: $color_1;
-	background-color: $background-color_1;
-	border: 1px solid var(--accent-color);
-	padding: 1rem;
-	margin: 3rem;
-	&:hover {
-		color: $color_2;
-		background-color: $background-color_2;
-		border: 1px solid var(--primary-color);
-		padding: 1rem;
-		margin: 3rem;
-	}
-}
-.btn-4 {
-    background: var(--accent-color);
+    button {
+        display: block;
+        margin: 1vh 0 0 0;
+        width: 90vw;
+        margin: auto;
+        margin-top: 5vw;
+    }
+    width: 100vw;
+    text-align: center;
 
-	&::before {
-		height: 100%;
-		left: 0;
-		top: 0;
-		width: 100%;
-	}
-	&::after {
-		background: var(--accent-color);
-		height: 100%;
-		left: 0;
-		top: 0;
-		width: 100%;
-	}
-	&:hover {
-		&:after {
-			height: 0;
-			left: 50%;
-			top: 50%;
-			width: 0;
-		}
-	}
+    .btn-3 {
+        background: var(--accent-color);
+        &::after {
+            height: 0;
+            left: 50%;
+            top: 50%;
+            width: 0;
+        }
+        &:hover {
+            &:after {
+                height: 100%;
+                left: 0;
+                top: 0;
+                width: 100%;
+            }
+        }
+    }
+
+    .btn-svg {
+        color: $color_1;
+        background-color: $background-color_1;
+        border: 1px solid var(--accent-color);
+        padding: 1rem;
+        margin: 3rem;
+        &:hover {
+            color: $color_2;
+            background-color: $background-color_2;
+            border: 1px solid var(--primary-color);
+            padding: 1rem;
+            margin: 3rem;
+        }
+    }
+
+    .btn-4 {
+        background: var(--accent-color);
+        &::before {
+            height: 100%;
+            left: 0;
+            top: 0;
+            width: 100%;
+        }
+        &::after {
+            background: var(--accent-color);
+            height: 100%;
+            left: 0;
+            top: 0;
+            width: 100%;
+        }
+        &:hover {
+            &:after {
+                height: 0;
+                left: 50%;
+                top: 50%;
+                width: 0;
+            }
+        }
+    }
 }
