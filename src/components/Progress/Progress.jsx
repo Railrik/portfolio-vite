@@ -6,7 +6,6 @@ import './Progress.scss';
 
 const Progress = ({ scrub }) => {
     const [animationDuration, setAnimationDuration] = useState(0);
-    const [isBottom, setIsBottom] = useState(false);
 
     useEffect(() => {
         setAnimationDuration(document.documentElement.scrollHeight - window.innerHeight);
@@ -14,7 +13,7 @@ const Progress = ({ scrub }) => {
 
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
-        console.log(isBottom);
+
         gsap
             .timeline({
                 scrollTrigger: {
@@ -22,9 +21,14 @@ const Progress = ({ scrub }) => {
                     start: "top top",
                     end: "bottom bottom",
                     scrub: scrub,
-                    onEnterBack: () => setIsBottom(false),
-                    onLeave: () => setIsBottom(true),
-                    markers: true
+                    onEnterBack: () => {
+                        gsap.to(["#scroll-text-1", "#scroll-text-2"], { opacity: 1, duration: 0.5 });
+                        gsap.to(".progress-info-fill", { backgroundImage: "linear-gradient(var(--accent-color), var(--accent-color))" });
+                    },
+                    onLeave: () => {
+                        gsap.to(["#scroll-text-1", "#scroll-text-2"], { opacity: 0, duration: 0.5 });
+                        gsap.to(".progress-info-fill", { backgroundImage: "linear-gradient(yourTargetColor, yourTargetColor)" });
+                    },
                 },
             })
             .fromTo(
@@ -40,13 +44,7 @@ const Progress = ({ scrub }) => {
                 0
             );
 
-        if (isBottom) {
-            gsap.to(["#scroll-text-1", "#scroll-text-2"], { opacity: 0, duration: 0.5 });
-        } else {
-            gsap.to(["#scroll-text-1", "#scroll-text-2"], { opacity: 1, duration: 0.5 });
-        }
-
-    }, [animationDuration, isBottom]);
+    }, [animationDuration]);
 
     return (
         <div className="progress-info">
