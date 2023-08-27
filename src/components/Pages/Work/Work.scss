@@ -271,6 +271,8 @@ $background-color_1: rgba(33, 33, 33, 0.9);
 @media (min-width: 992px) {
 	.demo-text .text {
 		font-size: 10vw;
+		width: 100%;
+		text-align: center;
 	}
 	.other-creations {
 		div {
