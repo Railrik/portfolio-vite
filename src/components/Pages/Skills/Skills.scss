@@ -5,13 +5,13 @@
 	line-height: 10vh;
 	font-size: 5vw;
 	text-align: center;
+	> ul {
+		padding-bottom: 10vw;
+	}
 }
 
 @media (min-width: 992px) {
 	#text-anim {
 		line-height: 20vh;
 	}
-}
-#text-anim ul {
-    padding-bottom: 10vw;
 }

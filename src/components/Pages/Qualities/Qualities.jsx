@@ -1,41 +1,49 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import './Qualities.scss';
 
 const Qualities = () => {
+    const containerRef = useRef(null);
 
     useEffect(() => {
-        gsap.set('.container-qualities', { scale: 0, rotation: 0 });
+        gsap.registerPlugin(ScrollTrigger);
 
-        const desktopStart = window.innerWidth >= 992 ? "30% center" : "-=10% top";
+        const container = containerRef.current;
 
-        gsap.to(".container-qualities", {
-            rotation: 360,
-            scale: 1,
+        gsap.set(container, { scale: 0, rotation: 0 });
+
+        const desktopStart = window.innerWidth >= 992 ? "center center" : "-=100vh center";
+
+        const tl = gsap.timeline({
             scrollTrigger: {
-                trigger: ".section-qualities",
-                markers: false,
+                trigger: container,
                 start: desktopStart,
                 end: "bottom bottom",
-                pin: false,
                 toggleActions: "play none none reverse",
             },
         });
-    }, [])
 
+        tl.to(container, {
+            rotation: 360,
+            scale: 1,
+        });
 
+        return () => {
+            tl.kill();
+        };
+    }, []);
 
     return (
         <div className="section section-qualities" id="qualities">
             <section className="demo-text">
-                <div className="wrapper-content text">Qualities</div>
+                <h2 className="wrapper-content text">Qualities</h2>
             </section>
-            <div className="container-qualities">
+            <div className="container-qualities" ref={containerRef}>
                 <span id="spin" />
             </div>
         </div>
-
     );
 };
 
