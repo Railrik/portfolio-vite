@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { gsap } from 'gsap';
+import { useLang } from '../../hooks/LangContext';
 
 import './Lang.scss';
 
 const Lang = () => {
+    const { currentLanguage, setCurrentLanguage } = useLang();
+
     const text = {
         loading: {
             en: "Loading",
@@ -16,26 +19,6 @@ const Lang = () => {
         job: {
             en: "Web Developer",
             fr: "Développeur Web",
-        },
-        link: {
-            en: "Go to project",
-            fr: "Voir le projet",
-        },
-        saveSvg: {
-            en: "Save the SVG",
-            fr: "Enregistrer le SVG",
-        },
-        sky: {
-            en: "SKY",
-            fr: "CIEL",
-        },
-        skin: {
-            en: "SKIN",
-            fr: "PEAU",
-        },
-        ground: {
-            en: "GROUND",
-            fr: "SOL",
         },
         otherCreations: {
             en: "Other creations",
@@ -107,7 +90,6 @@ const Lang = () => {
         },
     };
 
-    const [currentLanguage, setCurrentLanguage] = useState('fr');
     const styleTag = document.createElement("style");
 
     const updateTextContent = () => {
