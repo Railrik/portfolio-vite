@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useLang } from '../../hooks/LangContext';
 
 import './Wrapper.scss';
 import Progress from '../Progress/Progress';
@@ -21,13 +22,17 @@ import Contact from '../Pages/Contact/Contact';
 
 const Wrapper = () => {
     const [scrub, setScrub] = useState(1.2)
-
+    const [lang, setLang] = useState(1.2)
+    let { currentLanguage } = useLang();
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
         setupSectionsAnimations();
         setupSectionsChangeBgColor();
-
     }, []);
+
+    useEffect(() => {
+        setLang(currentLanguage);
+    }, [currentLanguage]);
 
     // Configuration des animations de défilement des sections
     const setupSectionsAnimations = () => {
@@ -153,7 +158,7 @@ const Wrapper = () => {
             <Header scrub={scrub} />
             <Lang />
             <main>
-                <Work scrub={scrub} />
+                <Work scrub={scrub} lang={lang} />
                 <Skills scrub={scrub} />
                 <Qualities />
                 <Hobbies />
