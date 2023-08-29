@@ -440,7 +440,7 @@ const Work = ({ scrub, lang }) => {
                         <ul className="wrapper-content">
                             <li />
                             <li>
-                                <a href="#modal-1" className="modal-trigger" data-modal-id="modal-1">
+                                <a href="#modal-1" className="modal-trigger" data-modal-id="modal-1" aria-label="Peopixs">
                                     <video autoPlay muted loop>
                                         <source src={peopixsMainVideo} type="video/mp4" />
                                         Your browser does not support the video tag.
@@ -448,7 +448,7 @@ const Work = ({ scrub, lang }) => {
                                 </a>
                             </li>
                             <li>
-                                <a href="#modal-2" className="modal-trigger" data-modal-id="modal-2">
+                                <a href="#modal-2" className="modal-trigger" data-modal-id="modal-2" aria-label="Spline">
                                     <video autoPlay muted loop>
                                         <source src={splineVideo} type="video/mp4" />
                                         Your browser does not support the video tag.
@@ -456,7 +456,7 @@ const Work = ({ scrub, lang }) => {
                                 </a>
                             </li>
                             <li>
-                                <a href="#modal-3" className="modal-trigger" data-modal-id="modal-3">
+                                <a href="#modal-3" className="modal-trigger" data-modal-id="modal-3" aria-label="SVG">
                                     <img src={svgProjectImg} alt='SVG Project' />
                                 </a>
                             </li>
@@ -467,7 +467,7 @@ const Work = ({ scrub, lang }) => {
                     <article>
                         <ul className="wrapper-content">
                             <li>
-                                <a href="#modal-4" className="modal-trigger" data-modal-id="modal-4">
+                                <a href="#modal-4" className="modal-trigger" data-modal-id="modal-4" aria-label="mydev">
                                     <video autoPlay muted loop>
                                         <source src={mydevMainVideo} type="video/mp4" />
                                         Your browser does not support the video tag.
@@ -475,12 +475,12 @@ const Work = ({ scrub, lang }) => {
                                 </a>
                             </li>
                             <li>
-                                <a href="#modal-5" className="modal-trigger" data-modal-id="modal-5">
+                                <a href="#modal-5" className="modal-trigger" data-modal-id="modal-5" aria-label="shop mydev">
                                     <img src={shopMydevtImg} alt="shop.mydev.fr" />
                                 </a>
                             </li>
                             <li>
-                                <a href="#modal-6" className="modal-trigger" data-modal-id="modal-6">
+                                <a href="#modal-6" className="modal-trigger" data-modal-id="modal-6" aria-label="Snakes In Your Wallet">
                                     <video autoPlay muted loop>
                                         <source src={snakeMainVideo} type="video/mp4" />
                                         Your browser does not support the video tag.

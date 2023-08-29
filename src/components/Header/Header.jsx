@@ -106,7 +106,7 @@ const Header = ({ scrub }) => {
                 <h3>Web Developer</h3>
             </hgroup>
             <span className="scroll-btn">
-                <a href="#">
+                <a href="#" aria-label="Scroll">
                     <span className="mouse">
                         <span> </span>
                     </span>

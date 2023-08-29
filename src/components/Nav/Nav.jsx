@@ -89,7 +89,7 @@ const Nav = () => {
                     <li className="link"><a href="#contact">contact</a></li>
                 </ul>
             </nav>
-            <button id="menu-button" className="menu-button" onClick={handleOnClick} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} ref={menuButtonRef}>
+            <button id="menu-button" className="menu-button" onClick={handleOnClick} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} ref={menuButtonRef} aria-label="Ouvrir le menu de navigation">
                 {toggle ? <i className="fa-sharp fa-solid fa-xmark" /> : <i className="fa-solid fa-plus" />}
             </button>
         </>
