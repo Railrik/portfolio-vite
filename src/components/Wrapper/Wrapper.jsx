@@ -40,6 +40,8 @@ const Wrapper = () => {
 
         sections.forEach((section, index) => {
             const wrapperContent = section.querySelector(".wrapper-content");
+            // const h2Height = section.querySelector(".demo-text h2").offsetHeight;
+            // console.log(h2Height);
             const isEven = index % 2 === 0;
             if (wrapperContent) {
                 const [x, xEnd] = isEven

@@ -12,11 +12,6 @@ $background-color_1: rgba(33, 33, 33, 0.9);
     -webkit-font-smoothing: antialiased;
 }
 
-// Component styles
-.wrapper-content {
-    display: flex;
-}
-
 .demo-gallery {
     margin-right: 25vw;
     margin-left: 25vw;
@@ -82,20 +77,6 @@ $background-color_1: rgba(33, 33, 33, 0.9);
                 }
             }
         }
-    }
-}
-
-.demo-text {
-    .text {
-        @extend .text-uppercase;
-        font-size: 12vw;
-        font-weight: 700;
-        color: $color_2;
-        width: 100%;
-        text-align: center;
-        display: block;
-        -webkit-font-smoothing: antialiased;
-        -webkit-text-stroke: 2px var(--primary-color);
     }
 }
 
@@ -419,11 +400,6 @@ $background-color_1: rgba(33, 33, 33, 0.9);
 }
 
 @media (min-width: 992px) {
-    .demo-text .text {
-        font-size: 10vw;
-        width: 100%;
-        text-align: center;
-    }
     .other-creations {
         div, article {
             a {
