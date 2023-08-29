@@ -79,7 +79,7 @@ const Lang = () => {
                 en: "Hobbies",
                 fr: "Loisirs",
             },
-            aboutMe: {
+            myQualities: {
                 en: "Qualities",
                 fr: "Qualités",
             },
@@ -101,13 +101,13 @@ const Lang = () => {
         jobTitle.textContent = text.job[currentLanguage];
         menuItems[0].textContent = text.menuItems.myWork[currentLanguage];
         menuItems[1].textContent = text.menuItems.mySkills[currentLanguage];
-        menuItems[2].textContent = text.menuItems.aboutMe[currentLanguage];
+        menuItems[2].textContent = text.menuItems.myQualities[currentLanguage];
         menuItems[3].textContent = text.menuItems.myHobbies[currentLanguage];
         menuItems[4].textContent = text.menuItems.contact[currentLanguage];
         document.querySelector(".section-work .demo-text .text").textContent = text.menuItems.myWork[currentLanguage];
         document.querySelector(".other-creations h3").textContent = text.otherCreations[currentLanguage];
         document.querySelector(".section-skills .demo-text .text").textContent = text.menuItems.mySkills[currentLanguage];
-        document.querySelector(".section-qualities .demo-text .text").textContent = text.menuItems.aboutMe[currentLanguage];
+        document.querySelector(".section-qualities .demo-text .text").textContent = text.menuItems.myQualities[currentLanguage];
         document.querySelector(".section-hobbies .demo-text .text").textContent = text.menuItems.myHobbies[currentLanguage];
 
         const spinKeyframesCSS = Object.entries(text.spinKeyframes).map(([key, value]) => {
