@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import AnimatedCursor from "react-animated-cursor"
+
 import { gsap } from 'gsap';
 
 import './App.scss';
@@ -39,6 +41,19 @@ function App() {
   return (
     <div className="app">
       <>
+        <AnimatedCursor
+          outerAlpha={1}
+          innerSize={10}
+          outerSize={20}
+          outerScale={2}
+          innerStyle={{
+            backgroundColor: '#fff'
+          }}
+          outerStyle={{
+            mixBlendMode: 'difference',
+            backgroundColor: '#fff'
+          }}
+        />
         <Loader onLoadingComplete={handleLoadingComplete} />
         <Wrapper />
       </>
