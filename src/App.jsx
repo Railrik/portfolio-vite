@@ -53,6 +53,15 @@ function App() {
             mixBlendMode: 'difference',
             backgroundColor: '#fff'
           }}
+          clickables={[
+            'a',
+            'input',
+            'label[for]',
+            'select',
+            'textarea',
+            'button',
+            '.logo'
+          ]}
         />
         <Loader onLoadingComplete={handleLoadingComplete} />
         <Wrapper />
