@@ -14,11 +14,11 @@ const Qualities = () => {
 
         gsap.set(container, { scale: 0, rotation: 0 });
 
-        const desktopStart = window.innerWidth >= 992 ? "center center" : "-=100vh center";
+        const desktopStart = window.innerWidth >= 992 ? "bottom center" : "bottom center";
 
         const tl = gsap.timeline({
             scrollTrigger: {
-                trigger: container,
+                trigger: "#qualities h2",
                 start: desktopStart,
                 end: "bottom bottom",
                 toggleActions: "play none none reverse",
