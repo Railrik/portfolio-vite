@@ -2,11 +2,23 @@ import React from 'react';
 import './Hobbies.scss';
 import Fancybox from '../../../hooks/FancyBox';
 
-import carrousel_1 from '../../../assets/img/carrousel/1.jpg';
-import carrousel_2 from '../../../assets/img/carrousel/2.jpg';
-import carrousel_3 from '../../../assets/img/carrousel/3.jpg';
-import carrousel_4 from '../../../assets/img/carrousel/4.jpg';
-import carrousel_5 from '../../../assets/img/carrousel/5.jpg';
+import carrousel_1_jpg from '../../../assets/img/carrousel/jpg/1.jpg';
+import carrousel_2_jpg from '../../../assets/img/carrousel/jpg/2.jpg';
+import carrousel_3_jpg from '../../../assets/img/carrousel/jpg/3.jpg';
+import carrousel_4_jpg from '../../../assets/img/carrousel/jpg/4.jpg';
+import carrousel_5_jpg from '../../../assets/img/carrousel/jpg/5.jpg';
+
+import carrousel_1_avif from '../../../assets/img/carrousel/avif/1.avif';
+import carrousel_2_avif from '../../../assets/img/carrousel/avif/2.avif';
+import carrousel_3_avif from '../../../assets/img/carrousel/avif/3.avif';
+import carrousel_4_avif from '../../../assets/img/carrousel/avif/4.avif';
+import carrousel_5_avif from '../../../assets/img/carrousel/avif/5.avif';
+
+import carrousel_1_webp from '../../../assets/img/carrousel/webp/1.webp';
+import carrousel_2_webp from '../../../assets/img/carrousel/webp/2.webp';
+import carrousel_3_webp from '../../../assets/img/carrousel/webp/3.webp';
+import carrousel_4_webp from '../../../assets/img/carrousel/webp/4.webp';
+import carrousel_5_webp from '../../../assets/img/carrousel/webp/5.webp';
 
 const Hobbies = () => {
     return (
@@ -22,30 +34,52 @@ const Hobbies = () => {
                         },
                     }}
                 >
+
                     <ul className="wrapper-content">
                         <li>
-                            <a href={carrousel_1} data-fancybox="hobbies" className="fancybox" data-caption="Musique">
-                                <img src={carrousel_1} alt="musique" />
+                            <a href={carrousel_1_jpg} data-fancybox="hobbies" className="fancybox" data-caption="Musique">
+                                <picture>
+                                    <source srcSet={carrousel_1_avif} type="image/avif" />
+                                    <source srcSet={carrousel_1_webp} type="image/webp" />
+                                    <img src={carrousel_1_jpg} alt="musique" />
+                                </picture>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href={carrousel_2_jpg} data-fancybox="hobbies" className="fancybox" data-caption="Tennis">
+                                <picture>
+                                    <source srcSet={carrousel_2_avif} type="image/avif" />
+                                    <source srcSet={carrousel_2_webp} type="image/webp" />
+                                    <img src={carrousel_2_jpg} alt="tennis" />
+                                </picture>
                             </a>
                         </li>
                         <li>
-                            <a href={carrousel_2} data-fancybox="hobbies" className="fancybox" data-caption="Tennis">
-                                <img src={carrousel_2} alt="tennis" />
+                            <a href={carrousel_3_jpg} data-fancybox="hobbies" className="fancybox" data-caption="Jeux vidéo">
+                                <picture>
+                                    <source srcSet={carrousel_3_avif} type="image/avif" />
+                                    <source srcSet={carrousel_3_webp} type="image/webp" />
+                                    <img src={carrousel_3_jpg} alt="jeux vidéo" />
+                                </picture>
                             </a>
                         </li>
                         <li>
-                            <a href={carrousel_3} data-fancybox="hobbies" className="fancybox" data-caption="Jeux vidéo">
-                                <img src={carrousel_3} alt="Jeux vidéo" />
+                            <a href={carrousel_4_jpg} data-fancybox="hobbies" className="fancybox" data-caption="Nature">
+                                <picture>
+                                    <source srcSet={carrousel_4_avif} type="image/avif" />
+                                    <source srcSet={carrousel_4_webp} type="image/webp" />
+                                    <img src={carrousel_4_jpg} alt="nature" />
+                                </picture>
                             </a>
                         </li>
                         <li>
-                            <a href={carrousel_4} data-fancybox="hobbies" className="fancybox" data-caption="Nature">
-                                <img src={carrousel_4} alt="nature" />
-                            </a>
-                        </li>
-                        <li>
-                            <a href={carrousel_5} data-fancybox="hobbies" className="fancybox" data-caption="Skateboard électrique">
-                                <img src={carrousel_5} alt="Skateboard" />
+                            <a href={carrousel_5_jpg} data-fancybox="hobbies" className="fancybox" data-caption="Skateboard électrique">
+                                <picture>
+                                    <source srcSet={carrousel_5_avif} type="image/avif" />
+                                    <source srcSet={carrousel_5_webp} type="image/webp" />
+                                    <img src={carrousel_5_jpg} alt="skateboard" />
+                                </picture>
                             </a>
                         </li>
                     </ul>
