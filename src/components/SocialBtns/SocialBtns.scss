@@ -1,0 +1,38 @@
+.social{
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  #github-icon, #linkedin-icon, #email-icon {
+    margin: .1rem;
+    font-size: 1.6rem;
+    background-color: transparent;
+    outline: none;
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    color: var(--primary-color);
+
+    text-decoration: none;
+  
+    i.fa-brands, i.fa-solid {
+      transition: transform 0.3s;
+    }
+  
+    &:hover i.fa-brands,&:hover i.fa-solid {
+      transform: scaleX(-1);
+    }
+  }
+}
+
+  
