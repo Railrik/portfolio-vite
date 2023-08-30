@@ -8,8 +8,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import './Header.scss';
-const Header = ({ scrub }) => {
-    const [isMobile, setIsMobile] = useState(false);
+const Header = ({ scrub, isMobile }) => {
 
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
@@ -18,23 +17,6 @@ const Header = ({ scrub }) => {
         setupVideoAnimation();
         setupMouseAnimation();
         setupProgressInfoAnimation();
-
-        // Vérification de la taille d'écran pour déterminer si c'est un appareil mobile
-        const mediaQuery = window.matchMedia('(max-width: 768px)');
-        setIsMobile(mediaQuery.matches);
-
-        // Gestionnaire pour suivre les changements de taille d'écran
-        const handleResize = () => {
-            setIsMobile(mediaQuery.matches);
-        };
-
-        // Ajouter le gestionnaire d'événement pour le changement de taille d'écran
-        mediaQuery.addListener(handleResize);
-
-        // Nettoyer le gestionnaire d'événement lors du démontage du composant
-        return () => {
-            mediaQuery.removeListener(handleResize);
-        };
     }, [])
 
     const tiltesHeaderAnimation = () => {

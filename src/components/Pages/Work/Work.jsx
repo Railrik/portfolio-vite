@@ -5,6 +5,9 @@ import Fancybox from '../../../hooks/FancyBox';
 
 import './Work.scss';
 import peopixsMainVideo from '../../../assets/videos/work/peopixs/peopixs-main.mp4';
+import peopixsMainPng from '../../../assets/img/work/peopixs/peopixs.png';
+import peopixsMainWebP from '../../../assets/img/work/peopixs/peopixs.webp';
+import peopixsMainAvif from '../../../assets/img/work/peopixs/peopixs.avif';
 import peopixsVideoExplication1 from '../../../assets/videos/work/peopixs/peopixs-1.mp4';
 import peopixsVideoExplication2 from '../../../assets/videos/work/peopixs/peopixs-2.mp4';
 import peopixsVideoExplication3 from '../../../assets/videos/work/peopixs/peopixs-3.mp4';
@@ -22,12 +25,25 @@ import shopMydevtImgExplication8 from '../../../assets/img/work/shop.mydev/8.png
 import shopMydevtImgExplication9 from '../../../assets/img/work/shop.mydev/9.png';
 
 import splineVideo from '../../../assets/videos/work/spline/cv-spline.mp4';
-import svgProjectImg from '../../../assets/img/work/thething/desert.svg';
-import mydevMainVideo from '../../../assets/videos/work/mydev/mydev.mp4';
-import shopMydevtImg from '../../../assets/img/work/shop.mydev/1.png';
-import snakeMainVideo from '../../../assets/videos/work/snakes/snakes.mp4';
+import splineMainPng from '../../../assets/img/work/spline/spline.png';
+import splineMainWebP from '../../../assets/img/work/spline/spline.webp';
+import splineMainAvif from '../../../assets/img/work/spline/spline.avif';
 
-const Work = ({ scrub, lang }) => {
+import svgProjectImg from '../../../assets/img/work/thething/desert.svg';
+
+import mydevMainVideo from '../../../assets/videos/work/mydev/mydev.mp4';
+import mydevMainPng from '../../../assets/img/work/mydev/mydev.png';
+import mydevMainWebP from '../../../assets/img/work/mydev/mydev.webp';
+import mydevMainAvif from '../../../assets/img/work/mydev/mydev.avif';
+
+import shopMydevtImg from '../../../assets/img/work/shop.mydev/1.png';
+
+import snakeMainVideo from '../../../assets/videos/work/snakes/snakes.mp4';
+import snakeMainPng from '../../../assets/img/work/snakes/snakes.png';
+import snakeMainWebP from '../../../assets/img/work/snakes/snakes.webp';
+import snakeMainAvif from '../../../assets/img/work/snakes/snakes.avif';
+
+const Work = ({ scrub, lang, isMobile }) => {
     const [renderedModals, setRenderedModals] = useState([]);
     const [svgAttributesBg, setSvgAttributesBg] = useState("#E0B6B6");
     const [svgAttributesSkin, setSvgAttributesSkin] = useState("#c59b95");
@@ -441,18 +457,34 @@ const Work = ({ scrub, lang }) => {
                             <li />
                             <li>
                                 <a href="#modal-1" className="modal-trigger" data-modal-id="modal-1" aria-label="Peopixs">
-                                    <video autoPlay muted loop>
-                                        <source src={peopixsMainVideo} type="video/mp4" />
-                                        Your browser does not support the video tag.
-                                    </video>
+                                    {isMobile ? (
+                                        <picture>
+                                            <source srcSet={peopixsMainWebP} type="image/webp" />
+                                            <source srcSet={peopixsMainAvif} type="image/avif" />
+                                            <img src={peopixsMainPng} alt="Peopixs" />
+                                        </picture>
+                                    ) : (
+                                        <video autoPlay muted playsInline loop>
+                                            <source src={peopixsMainVideo} type="video/mp4" />
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    )}
                                 </a>
                             </li>
                             <li>
                                 <a href="#modal-2" className="modal-trigger" data-modal-id="modal-2" aria-label="Spline">
-                                    <video autoPlay muted loop>
-                                        <source src={splineVideo} type="video/mp4" />
-                                        Your browser does not support the video tag.
-                                    </video>
+                                    {isMobile ? (
+                                        <picture>
+                                            <source srcSet={splineMainWebP} type="image/webp" />
+                                            <source srcSet={splineMainAvif} type="image/avif" />
+                                            <img src={splineMainPng} alt="Spline" />
+                                        </picture>
+                                    ) : (
+                                        <video autoPlay muted playsInline loop>
+                                            <source src={splineVideo} type="video/mp4" />
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    )}
                                 </a>
                             </li>
                             <li>
@@ -468,10 +500,18 @@ const Work = ({ scrub, lang }) => {
                         <ul className="wrapper-content">
                             <li>
                                 <a href="#modal-4" className="modal-trigger" data-modal-id="modal-4" aria-label="mydev">
-                                    <video autoPlay muted loop>
-                                        <source src={mydevMainVideo} type="video/mp4" />
-                                        Your browser does not support the video tag.
-                                    </video>
+                                    {isMobile ? (
+                                        <picture>
+                                            <source srcSet={mydevMainWebP} type="image/webp" />
+                                            <source srcSet={mydevMainAvif} type="image/avif" />
+                                            <img src={mydevMainPng} alt="mydev" />
+                                        </picture>
+                                    ) : (
+                                        <video autoPlay muted playsInline loop>
+                                            <source src={mydevMainVideo} type="video/mp4" />
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    )}
                                 </a>
                             </li>
                             <li>
@@ -481,10 +521,18 @@ const Work = ({ scrub, lang }) => {
                             </li>
                             <li>
                                 <a href="#modal-6" className="modal-trigger" data-modal-id="modal-6" aria-label="Snakes In Your Wallet">
-                                    <video autoPlay muted loop>
-                                        <source src={snakeMainVideo} type="video/mp4" />
-                                        Your browser does not support the video tag.
-                                    </video>
+                                    {isMobile ? (
+                                        <picture>
+                                            <source srcSet={snakeMainWebP} type="image/webp" />
+                                            <source srcSet={snakeMainAvif} type="image/avif" />
+                                            <img src={snakeMainPng} alt="Snakes in your wallet" />
+                                        </picture>
+                                    ) : (
+                                        <video autoPlay muted playsInline loop>
+                                            <source src={snakeMainVideo} type="video/mp4" />
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    )}
                                 </a>
                             </li>
                             <li />
