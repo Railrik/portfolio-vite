@@ -103,7 +103,7 @@ const Lang = () => {
         menuItems[1].textContent = text.menuItems.mySkills[currentLanguage];
         menuItems[2].textContent = text.menuItems.myQualities[currentLanguage];
         menuItems[3].textContent = text.menuItems.myHobbies[currentLanguage];
-        menuItems[4].textContent = text.menuItems.contact[currentLanguage];
+        // menuItems[4].textContent = text.menuItems.contact[currentLanguage];
         document.querySelector(".section-work .demo-text .text").textContent = text.menuItems.myWork[currentLanguage];
         document.querySelector(".other-creations h3").textContent = text.otherCreations[currentLanguage];
         document.querySelector(".section-skills .demo-text .text").textContent = text.menuItems.mySkills[currentLanguage];

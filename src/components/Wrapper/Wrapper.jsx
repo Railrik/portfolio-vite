@@ -7,7 +7,7 @@ import './Wrapper.scss';
 import Progress from '../Progress/Progress';
 import Logo from '../Logo/Logo';
 import Nav from '../Nav/Nav';
-import GithubBtn from '../Github-btn/GithubBtn';
+import SocialBtns from '../SocialBtns/SocialBtns';
 import Header from '../Header/Header';
 import Lang from '../Lang/Lang';
 import Work from '../Pages/Work/Work';
@@ -94,7 +94,7 @@ const Wrapper = () => {
                 tl.to("body, nav", { backgroundColor: targetBgColor })
                     .to("nav ul li a, #text-anim ul li", { color: targetColor })
                     .to(".demo-text .text", { css: { "-webkit-text-stroke": `2px ${targetColor}` } })
-                gsap.to(".menu-button, #github-icon, #language-switch", { color: targetColor, border: `2px solid ${targetColor}` })
+                gsap.to(".menu-button, .social a, #language-switch", { color: targetColor, border: `2px solid ${targetColor}` })
                 gsap.to(".progress-info-fill", {
                     backgroundImage: `linear-gradient(${targetColor}, ${targetColor})`,
                 });
@@ -111,7 +111,7 @@ const Wrapper = () => {
                 tl.to("body, nav", { backgroundColor: targetBgColor })
                     .to("nav ul li a,#text-anim ul li", { color: targetColor })
                     .to(".demo-text .text", { css: { "-webkit-text-stroke": `2px ${targetColor}` } })
-                gsap.to(".menu-button, #github-icon, #language-switch", { color: targetColor, border: `2px solid ${targetColor}` })
+                gsap.to(".menu-button, .social a, #language-switch", { color: targetColor, border: `2px solid ${targetColor}` })
                 gsap.to(".progress-info-fill", {
                     backgroundImage: `linear-gradient(${targetColor}, ${targetColor})`,
                 });
@@ -127,7 +127,7 @@ const Wrapper = () => {
                 tl.to("body, nav", { backgroundColor: targetBgColor })
                     .to("nav ul li a,#text-anim ul li", { color: targetColor })
                     .to(".demo-text .text", { css: { "-webkit-text-stroke": `2px ${targetColor}` } })
-                gsap.to(".menu-button, #github-icon, #language-switch", { color: targetColor, border: `2px solid ${targetColor}` })
+                gsap.to(".menu-button, .social a, #language-switch", { color: targetColor, border: `2px solid ${targetColor}` })
                 gsap.to(".progress-info-fill", {
                     backgroundImage: `linear-gradient(${targetColor}, ${targetColor})`,
                 });
@@ -143,7 +143,7 @@ const Wrapper = () => {
                 tl.to("body, nav", { backgroundColor: targetBgColor })
                     .to("nav ul li a,#text-anim ul li", { color: targetColor })
                     .to(".demo-text .text", { css: { "-webkit-text-stroke": `2px ${targetColor}` } })
-                gsap.to(".menu-button, #github-icon, #language-switch", { color: targetColor, border: `2px solid ${targetColor}` })
+                gsap.to(".menu-button, .social a, #language-switch", { color: targetColor, border: `2px solid ${targetColor}` })
                 gsap.to(".progress-info-fill", {
                     backgroundImage: `linear-gradient(${targetColor}, ${targetColor})`,
                 });
@@ -157,7 +157,7 @@ const Wrapper = () => {
             <Progress scrub={scrub} />
             <Logo />
             <Nav />
-            <GithubBtn />
+            <SocialBtns />
             <Header scrub={scrub} />
             <Lang />
             <main>
@@ -165,7 +165,7 @@ const Wrapper = () => {
                 <Skills scrub={scrub} />
                 <Qualities />
                 <Hobbies />
-                <Contact />
+                {/* <Contact /> */}
                 <Footer />
             </main>
         </div>

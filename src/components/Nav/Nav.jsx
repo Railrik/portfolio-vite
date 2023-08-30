@@ -86,7 +86,7 @@ const Nav = () => {
                     <li className="link"><a href="#skills">Skills</a></li>
                     <li className="link"><a href="#qualities">Qualities</a></li>
                     <li className="link"><a href="#hobbies">Hobbies</a></li>
-                    <li className="link"><a href="#contact">contact</a></li>
+                    {/* <li className="link"><a href="#contact">contact</a></li> */}
                 </ul>
             </nav>
             <button id="menu-button" className="menu-button" onClick={handleOnClick} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} ref={menuButtonRef} aria-label="Ouvrir le menu de navigation">
