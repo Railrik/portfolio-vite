@@ -7,7 +7,7 @@ const skillsList = [
     { text: 'HTML' },
     { text: 'CSS' },
     { text: 'JavaScript' },
-    { text: 'React.js' },
+    { text: 'ReactJs' },
     { text: 'Gsap' },
     { text: 'Bootstrap' },
     { text: 'PHP' },
