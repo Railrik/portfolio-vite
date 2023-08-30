@@ -9,6 +9,16 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import './Header.scss';
 const Header = ({ scrub, isMobile }) => {
+    const [isWebPLoaded, setIsWebPLoaded] = useState(false);
+    const [isAvifLoaded, setIsAvifLoaded] = useState(false);
+
+    const handleImageLoad = (imageType) => {
+        if (imageType === 'webp') {
+            setIsWebPLoaded(true);
+        } else if (imageType === 'avif') {
+            setIsAvifLoaded(true);
+        }
+    };
 
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
@@ -103,9 +113,15 @@ const Header = ({ scrub, isMobile }) => {
         <header id="main-header">
             {isMobile ? (
                 <picture>
-                    <source srcSet={headerImageWebP} type="image/webp" />
-                    <source srcSet={headerImageAvif} type="image/avif" />
-                    <img className="header-image" src={headerImagePng} alt="Header" />
+                    {isWebPLoaded ? (
+
+                        <source srcSet={headerImageWebP} type="image/webp" />
+                    ) : null}
+                    {isAvifLoaded ? (
+                        <source srcSet={headerImageAvif} type="image/avif" />
+                    ) : null}
+                    <img className="header-image" src={headerImagePng} alt="Header" onLoad={() => handleImageLoad('webp')}
+                    />
                 </picture>
             ) : (
                 <video className="header-video" autoPlay muted playsInline loop>
