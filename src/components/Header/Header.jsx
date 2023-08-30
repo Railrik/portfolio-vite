@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import headerVideo from '../../assets/videos/header.mp4';
-import headerImagePng from '../../assets/img/header.png';
+import headerImageJpg from '../../assets/img/header.jpg';
 import headerImageWebP from '../../assets/img/header.webp';
 import headerImageAvif from '../../assets/img/header.avif';
 
@@ -114,13 +114,12 @@ const Header = ({ scrub, isMobile }) => {
             {isMobile ? (
                 <picture>
                     {isWebPLoaded ? (
-
                         <source srcSet={headerImageWebP} type="image/webp" />
                     ) : null}
                     {isAvifLoaded ? (
                         <source srcSet={headerImageAvif} type="image/avif" />
                     ) : null}
-                    <img className="header-image" src={headerImagePng} alt="Header" onLoad={() => handleImageLoad('webp')}
+                    <img className="header-image" src={headerImageJpg} alt="Header" onLoad={() => handleImageLoad('webp')}
                     />
                 </picture>
             ) : (

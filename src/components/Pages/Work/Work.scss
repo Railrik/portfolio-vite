@@ -154,27 +154,26 @@ $background-color_1: rgba(33, 33, 33, 0.9);
     height: 100vh;
     z-index: -1;
     background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    background-position: center center;
     background-repeat: no-repeat;
     text-align: center;
     vertical-align: center;
 }
 
 .bg-cmachance {
-    background-image: url("../../../assets/img/work/cmachance/1.png");
+    background-image: url("../../../assets/img/work/cmachance/1.jpg");
 }
 
 .bg-cmahdf {
-    background-image: url("../../../assets/img/work/cmahdf/1.png");
+    background-image: url("../../../assets/img/work/cmahdf/1.jpg");
 }
 
 .bg-reveleTonDestin {
-    background-image: url("../../../assets/img/work/reveletoi/1.png");
+    background-image: url("../../../assets/img/work/reveletoi/1.jpg");
 }
 
 .bg-taxeApprentissage {
-    background-image: url("../../../assets/img/work/taxe-apprentissage/1.png");
+    background-image: url("../../../assets/img/work/taxe-apprentissage/1.jpg");
 }
 
 .modal-text-container {
