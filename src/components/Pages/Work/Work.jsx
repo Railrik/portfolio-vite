@@ -50,6 +50,15 @@ const Work = ({ scrub, lang, isMobile }) => {
     const [svgAttributesOutline, setSvgAttributesOutline] = useState("#FED4A2");
     const [svgImage, setSvgImage] = useState();
 
+    const [isPeopixsWebPLoaded, setIsPeopixsWebPLoaded] = useState(false);
+    const [isPeopixsAvifLoaded, setIsPeopixsAvifLoaded] = useState(false);
+    const [isSplineWebPLoaded, setIsSplineWebPLoaded] = useState(false);
+    const [isSplineAvifLoaded, setIsSplineAvifLoaded] = useState(false);
+    const [isMydevWebPLoaded, setIsMydevWebPLoaded] = useState(false);
+    const [isMydevAvifLoaded, setIsMydevAvifLoaded] = useState(false);
+    const [isSnakeWebPLoaded, setIsSnakeWebPLoaded] = useState(false);
+    const [isSnakeAvifLoaded, setIsSnakeAvifLoaded] = useState(false);
+
     const commonModalOne = {
         id: 'modal-1',
         videoExplicationSrc: [peopixsVideoExplication1, peopixsVideoExplication2, peopixsVideoExplication3, peopixsVideoExplication4, peopixsVideoExplication5],
@@ -209,6 +218,40 @@ const Work = ({ scrub, lang, isMobile }) => {
             },
         });
     }
+
+    const handleImageLoad = (project, imageType) => {
+
+        if (project === 'peopixs') {
+            if (imageType === 'webp') {
+                setIsPeopixsWebPLoaded(true);
+            } else if (imageType === 'avif') {
+                setIsPeopixsAvifLoaded(true);
+            }
+        } else
+            if (project === 'spline') {
+                if (imageType === 'webp') {
+                    setIsSplineWebPLoaded(true);
+                } else if (imageType === 'avif') {
+                    setIsSplineAvifLoaded(true);
+                }
+            }
+            else
+                if (project === 'mydev') {
+                    if (imageType === 'webp') {
+                        setIsMydevWebPLoaded(true);
+                    } else if (imageType === 'avif') {
+                        setIsMydevAvifLoaded(true);
+                    }
+                }
+                else
+                    if (project === 'snakes') {
+                        if (imageType === 'webp') {
+                            setIsSnakeWebPLoaded(true);
+                        } else if (imageType === 'avif') {
+                            setIsSnakeAvifLoaded(true);
+                        }
+                    }
+    };
 
     useEffect(() => {
         const loadImage = async (imgURL) => {
@@ -459,9 +502,13 @@ const Work = ({ scrub, lang, isMobile }) => {
                                 <a href="#modal-1" className="modal-trigger" data-modal-id="modal-1" aria-label="Peopixs">
                                     {isMobile ? (
                                         <picture>
-                                            <source srcSet={peopixsMainWebP} type="image/webp" />
-                                            <source srcSet={peopixsMainAvif} type="image/avif" />
-                                            <img src={peopixsMainPng} alt="Peopixs" />
+                                            {isPeopixsWebPLoaded ? (
+                                                <source srcSet={peopixsMainWebP} type="image/webp" />
+                                            ) : null}
+                                            {isPeopixsAvifLoaded ? (
+                                                <source srcSet={peopixsMainAvif} type="image/avif" />
+                                            ) : null}
+                                            <img src={peopixsMainPng} alt="Peopixs" onLoad={() => handleImageLoad('peopixs', 'webp')} />
                                         </picture>
                                     ) : (
                                         <video autoPlay muted playsInline loop>
@@ -475,9 +522,14 @@ const Work = ({ scrub, lang, isMobile }) => {
                                 <a href="#modal-2" className="modal-trigger" data-modal-id="modal-2" aria-label="Spline">
                                     {isMobile ? (
                                         <picture>
-                                            <source srcSet={splineMainWebP} type="image/webp" />
-                                            <source srcSet={splineMainAvif} type="image/avif" />
-                                            <img src={splineMainPng} alt="Spline" />
+                                            {isSplineWebPLoaded ? (
+                                                <source srcSet={splineMainWebP} type="image/webp" />
+                                            ) : null}
+                                            {isSplineAvifLoaded ? (
+                                                <source srcSet={splineMainAvif} type="image/avif" />
+                                            ) : null}
+                                            <img src={splineMainPng} alt="Spline" onLoad={() => handleImageLoad('spline', 'webp')}
+                                            />
                                         </picture>
                                     ) : (
                                         <video autoPlay muted playsInline loop>
@@ -502,9 +554,13 @@ const Work = ({ scrub, lang, isMobile }) => {
                                 <a href="#modal-4" className="modal-trigger" data-modal-id="modal-4" aria-label="mydev">
                                     {isMobile ? (
                                         <picture>
-                                            <source srcSet={mydevMainWebP} type="image/webp" />
-                                            <source srcSet={mydevMainAvif} type="image/avif" />
-                                            <img src={mydevMainPng} alt="mydev" />
+                                            {isMydevWebPLoaded ? (
+                                                <source srcSet={mydevMainWebP} type="image/webp" />
+                                            ) : null}
+                                            {isMydevAvifLoaded ? (
+                                                <source srcSet={mydevMainAvif} type="image/avif" />
+                                            ) : null}
+                                            <img src={mydevMainPng} alt="mydev" onLoad={() => handleImageLoad('mydev', 'webp')} />
                                         </picture>
                                     ) : (
                                         <video autoPlay muted playsInline loop>
@@ -523,9 +579,13 @@ const Work = ({ scrub, lang, isMobile }) => {
                                 <a href="#modal-6" className="modal-trigger" data-modal-id="modal-6" aria-label="Snakes In Your Wallet">
                                     {isMobile ? (
                                         <picture>
-                                            <source srcSet={snakeMainWebP} type="image/webp" />
-                                            <source srcSet={snakeMainAvif} type="image/avif" />
-                                            <img src={snakeMainPng} alt="Snakes in your wallet" />
+                                            {isSnakeWebPLoaded ? (
+                                                <source srcSet={snakeMainWebP} type="image/webp" />
+                                            ) : null}
+                                            {isSnakeAvifLoaded ? (
+                                                <source srcSet={snakeMainAvif} type="image/avif" />
+                                            ) : null}
+                                            <img src={snakeMainPng} alt="Snakes in your wallet" onLoad={() => handleImageLoad('snakes', 'webp')} />
                                         </picture>
                                     ) : (
                                         <video autoPlay muted playsInline loop>
