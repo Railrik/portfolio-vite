@@ -19,6 +19,7 @@ import useScrollEffect from '../../hooks/useScrollEffect';
 import Qualities from '../Pages/Qualities/Qualities';
 import Hobbies from '../Pages/Hobbies/Hobbies';
 import Contact from '../Pages/Contact/Contact';
+import Footer from '../Footer/Footer';
 
 const Wrapper = () => {
     const [scrub, setScrub] = useState(1.2)
@@ -165,6 +166,7 @@ const Wrapper = () => {
                 <Qualities />
                 <Hobbies />
                 <Contact />
+                <Footer />
             </main>
         </div>
     );
