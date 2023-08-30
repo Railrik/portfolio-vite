@@ -4,7 +4,7 @@ Bienvenue sur mon portfolio personnel ! Je suis un développeur web passionné p
 
 ## Description
 
-Ce portfolio a été développé en utilisant le framework `Vite` et intégrant `React.js`, offrant une base moderne et performante pour la création d'applications web. J'ai enrichi ce projet en utilisant la bibliothèque `GSAP` pour ajouter des fonctionnalités interactives et dynamiques.
+Ce portfolio a été développé en utilisant le framework `Vite` et intégrant `ReactJs`, offrant une base moderne et performante pour la création d'applications web. J'ai enrichi ce projet en utilisant la bibliothèque `GSAP` pour ajouter des fonctionnalités interactives et dynamiques.
 
 Il met en avant mes compétences en développement web, tout en présentant une sélection de mes projets passés. De plus, il offre un aperçu de mes qualités et compétences en tant que développeur. Vous y trouverez également une section détaillée sur mes autres réalisations ainsi que mes centres d'intérêt et hobbies.
 

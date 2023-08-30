@@ -38,7 +38,7 @@ const Work = ({ scrub, lang }) => {
         id: 'modal-1',
         videoExplicationSrc: [peopixsVideoExplication1, peopixsVideoExplication2, peopixsVideoExplication3, peopixsVideoExplication4, peopixsVideoExplication5],
         link: 'https://peopixs.io',
-        technologies: ["React.js", "Redux", "Node.js", "MongoDb", "Solidity"],
+        technologies: ["ReactJs", "Redux", "Node.js", "MongoDb", "Solidity"],
     };
     const commonModalTwo = {
         id: 'modal-2',
@@ -54,7 +54,7 @@ const Work = ({ scrub, lang }) => {
     const commonModalFour = {
         id: 'modal-4',
         link: 'https://mydev.fr',
-        technologies: ["React.js", "PHP", "TsParticle"],
+        technologies: ["ReactJs", "PHP", "TsParticle"],
     };
     const commonModalFive = {
         id: 'modal-5',
@@ -65,7 +65,7 @@ const Work = ({ scrub, lang }) => {
     const commonModalSix = {
         id: 'modal-6',
         link: 'https://www.snakesinyourwallet.xyz/',
-        technologies: ["React.js", "Gsap", "Solidity", "smart contract", "Ethereum blockchain"],
+        technologies: ["ReactJs", "Gsap", "Solidity", "smart contract", "Ethereum blockchain"],
     };
 
     const text = {
