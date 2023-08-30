@@ -21,13 +21,16 @@ const Progress = ({ scrub }) => {
                     start: "top top",
                     end: "bottom bottom",
                     scrub: scrub,
+
                     onEnterBack: () => {
+                        gsap.to(".progress-info", { scale: 1, duration: 0 });
                         gsap.to(["#scroll-text-1", "#scroll-text-2"], { opacity: 1, duration: 0.5 });
-                        gsap.to(".progress-info-fill", { backgroundImage: "linear-gradient(var(--accent-color), var(--accent-color))" });
+                        gsap.to(".progress-info-fill", { backgroundImage: "linear-gradient(var(--primary-color), var(--primary-color))" });
                     },
                     onLeave: () => {
+                        gsap.to(".progress-info", { scale: 0, duration: 0 });
                         gsap.to(["#scroll-text-1", "#scroll-text-2"], { opacity: 0, duration: 0.5 });
-                        gsap.to(".progress-info-fill", { backgroundImage: "linear-gradient(yourTargetColor, yourTargetColor)" });
+                        gsap.to(".progress-info-fill", { backgroundImage: "linear-gradient(var(--primary-color), var(--primary-color))" });
                     },
                 },
             })

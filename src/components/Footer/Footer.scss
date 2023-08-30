@@ -1,0 +1,23 @@
+.footer {
+    color: var(--primary-color);
+    font-size: 3vw ;
+    position: absolute;
+    bottom : 3rem;
+    width: 100%;
+    .footer-content {
+        text-align: center;
+    }
+     a{
+        text-decoration: none;
+        font-weight: 700;
+        color: var(--primary-color);
+    }
+  }
+
+  @media (min-width: 992px) {
+    .footer {
+        font-size: 1vw ;
+        bottom : 2rem;
+    }
+  }
+  
