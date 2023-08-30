@@ -25,6 +25,8 @@ const Wrapper = () => {
     const [scrub, setScrub] = useState(1.2)
     const [lang, setLang] = useState(1.2)
     let { currentLanguage } = useLang();
+    const [isMobile, setIsMobile] = useState(false);
+
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
         setupSectionsAnimations();
@@ -35,6 +37,24 @@ const Wrapper = () => {
         setLang(currentLanguage);
     }, [currentLanguage]);
 
+    useEffect(() => {
+        // Vérification de la taille d'écran pour déterminer si c'est un appareil mobile
+        const mediaQuery = window.matchMedia('(max-width: 768px)');
+        setIsMobile(mediaQuery.matches);
+
+        // Gestionnaire pour suivre les changements de taille d'écran
+        const handleResize = () => {
+            setIsMobile(mediaQuery.matches);
+        };
+
+        // Ajouter le gestionnaire d'événement pour le changement de taille d'écran
+        mediaQuery.addListener(handleResize);
+
+        // Nettoyer le gestionnaire d'événement lors du démontage du composant
+        return () => {
+            mediaQuery.removeListener(handleResize);
+        };
+    }, [])
     // Configuration des animations de défilement des sections
     const setupSectionsAnimations = () => {
         const sections = document.querySelectorAll("section");
@@ -158,10 +178,10 @@ const Wrapper = () => {
             <Logo />
             <Nav />
             <SocialBtns />
-            <Header scrub={scrub} />
+            <Header scrub={scrub} isMobile={isMobile} />
             <Lang />
             <main>
-                <Work scrub={scrub} lang={lang} />
+                <Work scrub={scrub} lang={lang} isMobile={isMobile} />
                 <Skills scrub={scrub} />
                 <Qualities />
                 <Hobbies />

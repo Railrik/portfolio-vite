@@ -1,10 +1,14 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import headerVideo from '../../assets/videos/header.mp4';
+import headerImagePng from '../../assets/img/header.png';
+import headerImageWebP from '../../assets/img/header.webp';
+import headerImageAvif from '../../assets/img/header.avif';
+
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import './Header.scss';
-const Header = ({ scrub }) => {
+const Header = ({ scrub, isMobile }) => {
 
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
@@ -97,9 +101,17 @@ const Header = ({ scrub }) => {
 
     return (
         <header id="main-header">
-            <video className="header-video" autoPlay muted loop>
-                <source src={headerVideo} type="video/mp4" />
-            </video>
+            {isMobile ? (
+                <picture>
+                    <source srcSet={headerImageWebP} type="image/webp" />
+                    <source srcSet={headerImageAvif} type="image/avif" />
+                    <img className="header-image" src={headerImagePng} alt="Header" />
+                </picture>
+            ) : (
+                <video className="header-video" autoPlay muted playsInline loop>
+                    <source src={headerVideo} type="video/mp4" />
+                </video>
+            )}
             <hgroup>
                 <h1>Benjamin Ligny</h1>
                 <h2>Portfolio</h2>
