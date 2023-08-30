@@ -5,7 +5,7 @@ import Fancybox from '../../../hooks/FancyBox';
 
 import './Work.scss';
 import peopixsMainVideo from '../../../assets/videos/work/peopixs/peopixs-main.mp4';
-import peopixsMainPng from '../../../assets/img/work/peopixs/peopixs.png';
+import peopixsMainJpg from '../../../assets/img/work/peopixs/peopixs.jpg';
 import peopixsMainWebP from '../../../assets/img/work/peopixs/peopixs.webp';
 import peopixsMainAvif from '../../../assets/img/work/peopixs/peopixs.avif';
 import peopixsVideoExplication1 from '../../../assets/videos/work/peopixs/peopixs-1.mp4';
@@ -14,32 +14,32 @@ import peopixsVideoExplication3 from '../../../assets/videos/work/peopixs/peopix
 import peopixsVideoExplication4 from '../../../assets/videos/work/peopixs/peopixs-4.mp4';
 import peopixsVideoExplication5 from '../../../assets/videos/work/peopixs/peopixs-5.mp4';
 
-import shopMydevtImgExplication1 from '../../../assets/img/work/shop.mydev/1.png';
-import shopMydevtImgExplication2 from '../../../assets/img/work/shop.mydev/2.png';
-import shopMydevtImgExplication3 from '../../../assets/img/work/shop.mydev/3.png';
-import shopMydevtImgExplication4 from '../../../assets/img/work/shop.mydev/4.png';
-import shopMydevtImgExplication5 from '../../../assets/img/work/shop.mydev/5.png';
-import shopMydevtImgExplication6 from '../../../assets/img/work/shop.mydev/6.png';
-import shopMydevtImgExplication7 from '../../../assets/img/work/shop.mydev/7.png';
-import shopMydevtImgExplication8 from '../../../assets/img/work/shop.mydev/8.png';
-import shopMydevtImgExplication9 from '../../../assets/img/work/shop.mydev/9.png';
+import shopMydevtImgExplication1 from '../../../assets/img/work/shop.mydev/1.jpg';
+import shopMydevtImgExplication2 from '../../../assets/img/work/shop.mydev/2.jpg';
+import shopMydevtImgExplication3 from '../../../assets/img/work/shop.mydev/3.jpg';
+import shopMydevtImgExplication4 from '../../../assets/img/work/shop.mydev/4.jpg';
+import shopMydevtImgExplication5 from '../../../assets/img/work/shop.mydev/5.jpg';
+import shopMydevtImgExplication6 from '../../../assets/img/work/shop.mydev/6.jpg';
+import shopMydevtImgExplication7 from '../../../assets/img/work/shop.mydev/7.jpg';
+import shopMydevtImgExplication8 from '../../../assets/img/work/shop.mydev/8.jpg';
+import shopMydevtImgExplication9 from '../../../assets/img/work/shop.mydev/9.jpg';
 
 import splineVideo from '../../../assets/videos/work/spline/cv-spline.mp4';
-import splineMainPng from '../../../assets/img/work/spline/spline.png';
+import splineMainJpg from '../../../assets/img/work/spline/spline.jpg';
 import splineMainWebP from '../../../assets/img/work/spline/spline.webp';
 import splineMainAvif from '../../../assets/img/work/spline/spline.avif';
 
 import svgProjectImg from '../../../assets/img/work/thething/desert.svg';
 
 import mydevMainVideo from '../../../assets/videos/work/mydev/mydev.mp4';
-import mydevMainPng from '../../../assets/img/work/mydev/mydev.png';
+import mydevMainJpg from '../../../assets/img/work/mydev/mydev.jpg';
 import mydevMainWebP from '../../../assets/img/work/mydev/mydev.webp';
 import mydevMainAvif from '../../../assets/img/work/mydev/mydev.avif';
 
-import shopMydevtImg from '../../../assets/img/work/shop.mydev/1.png';
+import shopMydevtImg from '../../../assets/img/work/shop.mydev/1.jpg';
 
 import snakeMainVideo from '../../../assets/videos/work/snakes/snakes.mp4';
-import snakeMainPng from '../../../assets/img/work/snakes/snakes.png';
+import snakeMainJpg from '../../../assets/img/work/snakes/snakes.jpg';
 import snakeMainWebP from '../../../assets/img/work/snakes/snakes.webp';
 import snakeMainAvif from '../../../assets/img/work/snakes/snakes.avif';
 
@@ -508,7 +508,7 @@ const Work = ({ scrub, lang, isMobile }) => {
                                             {isPeopixsAvifLoaded ? (
                                                 <source srcSet={peopixsMainAvif} type="image/avif" />
                                             ) : null}
-                                            <img src={peopixsMainPng} alt="Peopixs" onLoad={() => handleImageLoad('peopixs', 'webp')} />
+                                            <img src={peopixsMainJpg} alt="Peopixs" onLoad={() => handleImageLoad('peopixs', 'webp')} />
                                         </picture>
                                     ) : (
                                         <video autoPlay muted playsInline loop>
@@ -528,7 +528,7 @@ const Work = ({ scrub, lang, isMobile }) => {
                                             {isSplineAvifLoaded ? (
                                                 <source srcSet={splineMainAvif} type="image/avif" />
                                             ) : null}
-                                            <img src={splineMainPng} alt="Spline" onLoad={() => handleImageLoad('spline', 'webp')}
+                                            <img src={splineMainJpg} alt="Spline" onLoad={() => handleImageLoad('spline', 'webp')}
                                             />
                                         </picture>
                                     ) : (
@@ -560,7 +560,7 @@ const Work = ({ scrub, lang, isMobile }) => {
                                             {isMydevAvifLoaded ? (
                                                 <source srcSet={mydevMainAvif} type="image/avif" />
                                             ) : null}
-                                            <img src={mydevMainPng} alt="mydev" onLoad={() => handleImageLoad('mydev', 'webp')} />
+                                            <img src={mydevMainJpg} alt="mydev" onLoad={() => handleImageLoad('mydev', 'webp')} />
                                         </picture>
                                     ) : (
                                         <video autoPlay muted playsInline loop>
@@ -585,7 +585,7 @@ const Work = ({ scrub, lang, isMobile }) => {
                                             {isSnakeAvifLoaded ? (
                                                 <source srcSet={snakeMainAvif} type="image/avif" />
                                             ) : null}
-                                            <img src={snakeMainPng} alt="Snakes in your wallet" onLoad={() => handleImageLoad('snakes', 'webp')} />
+                                            <img src={snakeMainJpg} alt="Snakes in your wallet" onLoad={() => handleImageLoad('snakes', 'webp')} />
                                         </picture>
                                     ) : (
                                         <video autoPlay muted playsInline loop>
