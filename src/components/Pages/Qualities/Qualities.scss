@@ -1,18 +1,77 @@
-#spin {
-	text-transform: uppercase;
-	font-size: 10vw;
-	color: var(--primary-color);
-	-webkit-font-smoothing: antialiased;
-	-webkit-text-stroke: 2px var(--primary-color);
-	&:after {
-		content: "";
-		animation: spin 7s linear infinite;
-	}
+.section-qualities {
+    /* Styles for the section containing the component */
 }
+
+.comparisonSection {
+    position: relative;
+    padding-bottom: 56.25%; /* to maintain aspect ratio (responsive!) */
+}
+
 .container-qualities {
-	position: relative;
-	max-width: 100vw;
-	text-align: center;
-	height: 70vh;
-	 margin-top: 30vh;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        width: 100%;
+        height: 10vh;
+        background-image: radial-gradient(var(--accent-color) 50%, transparent 10%);
+        background-size: 2px 2px;
+    }
 }
+
+#spin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    font-size: 10vw;
+    color: var(--accent-color);
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke: .08rem var(--primary-color);
+    &:after {
+        content: '';
+        animation: spin 7s linear infinite;
+    }
+}
+
+.comparisonImage {
+    width: 100%;
+    height: 100%;
+}
+
+.afterImage {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    transform: translate(100%, 0px);
+}
+
+.afterImage img {
+    transform: translate(-100%, 0px);
+}
+
+.comparisonImage img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+
+@media (min-width: 992px) {
+    .container-qualities {
+        &:before {
+            height: 25vh;
+        }
+    }
+    #spin {
+        -webkit-text-stroke: .1rem var(--primary-color);  
+    }
+  }

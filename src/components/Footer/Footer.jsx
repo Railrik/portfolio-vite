@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Footer.scss';
-
 const Footer = () => {
-
     const [alreadyCsl, setAlreadyCsl] = useState(false)
     useEffect(() => {
         setAlreadyCsl(true)
@@ -18,7 +16,6 @@ const Footer = () => {
             console.log('%chttps://ligny.pro', styles);
         }
     }, [alreadyCsl]);
-
 
     return (
         <footer className="footer">
