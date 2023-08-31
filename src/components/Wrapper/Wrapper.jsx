@@ -18,7 +18,6 @@ import Skills from '../Pages/Skills/Skills';
 import useScrollEffect from '../../hooks/useScrollEffect';
 import Qualities from '../Pages/Qualities/Qualities';
 import Hobbies from '../Pages/Hobbies/Hobbies';
-import Contact from '../Pages/Contact/Contact';
 import Footer from '../Footer/Footer';
 
 const Wrapper = () => {
@@ -183,11 +182,10 @@ const Wrapper = () => {
             <main>
                 <Work scrub={scrub} lang={lang} isMobile={isMobile} />
                 <Skills scrub={scrub} />
-                <Qualities />
+                <Qualities scrub={scrub} />
                 <Hobbies />
-                {/* <Contact /> */}
-                <Footer />
             </main>
+            <Footer />
         </div>
     );
 };
