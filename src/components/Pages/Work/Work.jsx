@@ -63,7 +63,7 @@ const Work = ({ scrub, lang, isMobile }) => {
         id: 'modal-1',
         videoExplicationSrc: [peopixsVideoExplication1, peopixsVideoExplication2, peopixsVideoExplication3, peopixsVideoExplication4, peopixsVideoExplication5],
         link: 'https://peopixs.io',
-        technologies: ["ReactJs", "Redux", "Node.js", "MongoDb", "Solidity"],
+        technologies: ["ReactJs", "Redux", "NodeJs", "MongoDb", "Solidity"],
     };
     const commonModalTwo = {
         id: 'modal-2',
@@ -120,12 +120,12 @@ const Work = ({ scrub, lang, isMobile }) => {
             en: {
                 ...commonModalOne,
                 title: "Peopixs.io - 2023",
-                content: 'Peopixs is an ongoing web 3 project in development. Peopixs are unique and fully customizable NFTs stored on the Ethereum blockchain. They are created by selecting desired options to craft a distinctive Peopix character. Data is stored on an IPFS server in Base64 format. This project operates with a React front-end, a Node.js back-end, and a mongoDb database. Smart contract is create with Solidity language. The ultimate goal is to seamlessly integrate these Peopix characters into an interactive RPG-style game, akin to Pokémon on Game Boy. Players will have the ability to steer their characters using keyboard keys and engage in various scenarios and interactions within the gaming world, including quests and player-versus-environment (PVE) challenges. I have developed this game in JavaScript without using any frameworks. Additionally, I have crafted the game maps using the <a href="https://www.mapeditor.org/" target="_blank">Tiled</a> software.',
+                content: 'Peopixs is an ongoing web 3 project in development. Peopixs are unique and fully customizable NFTs stored on the Ethereum blockchain. They are created by selecting desired options to craft a distinctive Peopix character. Data is stored on an IPFS server in Base64 format. This project operates with a React front-end, a NodeJs back-end, and a mongoDb database. Smart contract is create with Solidity language. The ultimate goal is to seamlessly integrate these Peopix characters into an interactive RPG-style game, akin to Pokémon on Game Boy. Players will have the ability to steer their characters using keyboard keys and engage in various scenarios and interactions within the gaming world, including quests and player-versus-environment (PVE) challenges. I have developed this game in JavaScript without using any frameworks. Additionally, I have crafted the game maps using the <a href="https://www.mapeditor.org/" target="_blank">Tiled</a> software.',
             },
             fr: {
                 ...commonModalOne,
                 title: "Peopixs.io - 2023",
-                content: 'Peopixs est un projet web 3 en cours de développement. Les Peopixs sont des NFT uniques et entièrement personnalisables stockés sur la blockchain Ethereum. Ils sont créés en sélectionnant les options souhaitées pour créer un personnage Peopix unique. Les données sont stockées sur un serveur IPFS en Base64. Ce projet tourne avec un front React, un back Node.js ainsi qu\'une base de données mongoDb. Le smart contract est développé avec le langage Solidity. L\'objectif ultime est d\'intégrer ces personnages Peopix dans un jeu interactif de style RPG, similaire à Pokémon sur Game Boy. Les joueurs pourront contrôler leurs personnages à l\'aide des touches du clavier et participer à différents scénarios et interactions au sein du monde du jeu, y compris des quêtes et des défis joueur contre environnement (PVE). J\'ai créé ce jeu en JavaScript sans utiliser de frameworks. De plus, j\'ai élaboré les cartes du jeu à l\'aide du logiciel <a href="https://www.mapeditor.org/" target="_blank">Tiled</a>.',
+                content: 'Peopixs est un projet web 3 en cours de développement. Les Peopixs sont des NFT uniques et entièrement personnalisables stockés sur la blockchain Ethereum. Ils sont créés en sélectionnant les options souhaitées pour créer un personnage Peopix unique. Les données sont stockées sur un serveur IPFS en Base64. Ce projet tourne avec un front React, un back NodeJs ainsi qu\'une base de données mongoDb. Le smart contract est développé avec le langage Solidity. L\'objectif ultime est d\'intégrer ces personnages Peopix dans un jeu interactif de style RPG, similaire à Pokémon sur Game Boy. Les joueurs pourront contrôler leurs personnages à l\'aide des touches du clavier et participer à différents scénarios et interactions au sein du monde du jeu, y compris des quêtes et des défis joueur contre environnement (PVE). J\'ai créé ce jeu en JavaScript sans utiliser de frameworks. De plus, j\'ai élaboré les cartes du jeu à l\'aide du logiciel <a href="https://www.mapeditor.org/" target="_blank">Tiled</a>.',
             }
         },
         {
@@ -464,7 +464,7 @@ const Work = ({ scrub, lang, isMobile }) => {
         const animateBackgroundFilters = (triggerClass) => {
             gsap.to(triggerClass, {
                 filter: "blur(5px)",
-                opacity: 0.1,
+                opacity: 0,
                 scrollTrigger: {
                     trigger: triggerClass,
                     start: "bottom bottom",
