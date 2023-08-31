@@ -98,6 +98,10 @@ const Work = ({ scrub, lang, isMobile }) => {
             en: "Go to project",
             fr: "Voir le projet",
         },
+        viewMore: {
+            en: "View more",
+            fr: "Voir plus",
+        },
         saveSvg: {
             en: "Save the SVG",
             fr: "Enregistrer le SVG",
@@ -287,7 +291,11 @@ const Work = ({ scrub, lang, isMobile }) => {
                 const modalContent = modalItem[lang];
                 link.setAttribute('data-modal-title', modalContent.title);
                 const truncatedContent = modalContent.content.substring(0, 120) + ' ...';
-                link.setAttribute('data-modal-content', truncatedContent);
+                if (!isMobile) {
+                    link.setAttribute('data-modal-content', truncatedContent);
+                } else {
+                    link.setAttribute('data-modal-content', text.viewMore[lang]);
+                }
             }
         });
 
