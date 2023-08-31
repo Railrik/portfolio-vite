@@ -15,8 +15,7 @@
 			&:after,
 			&::before {
 				background-color: var(--accent-color);
-				height: 10px;
-				border-radius: 5px;
+				height: 1px;
 				content: "";
 			}
 		}
