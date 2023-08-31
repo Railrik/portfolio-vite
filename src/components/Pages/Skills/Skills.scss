@@ -7,6 +7,18 @@
 	text-align: center;
 	> ul {
 		padding-bottom: 10vw;
+		> li {
+			display: grid;
+			grid-template-columns: 1fr auto 1fr;
+			gap: 20px;
+			align-items: center;
+			&:after,
+			&::before {
+				background-color: var(--accent-color);
+				height: 2px;
+				content: "";
+			}
+		}
 	}
 }
 
