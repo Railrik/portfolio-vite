@@ -1,6 +1,9 @@
 $color_1: var(--primary-color);
 $background-color_1: rgba(195, 209, 216, 0.5);
 
+#hobbies{
+    min-height: 100vh;
+}
 .gallery-type-2 {
 	li {
 		position: relative;
