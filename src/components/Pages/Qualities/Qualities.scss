@@ -1,5 +1,5 @@
 .section-qualities {
-    /* Styles for the section containing the component */
+margin-bottom: 10vh;
 }
 
 .comparisonSection {
@@ -33,12 +33,10 @@
     transform: translate(-50%, -50%);
     text-transform: uppercase;
     font-size: 10vw;
-    color: var(--accent-color);
-    -webkit-font-smoothing: antialiased;
-    -webkit-text-stroke: .08rem var(--primary-color);
+    color: var(--primary-color);
     &:after {
         content: '';
-        animation: spin 7s linear infinite;
+        animation: spin 10s linear infinite;
     }
 }
 
@@ -70,8 +68,5 @@
         &:before {
             height: 25vh;
         }
-    }
-    #spin {
-        -webkit-text-stroke: .1rem var(--primary-color);  
     }
   }
