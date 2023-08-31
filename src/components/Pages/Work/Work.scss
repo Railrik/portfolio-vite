@@ -72,7 +72,7 @@ $background-color_1: rgba(33, 33, 33, 0.9);
                     color: $color_1;
                     opacity: 0;
                     transition: opacity 0.3s ease;
-                    text-align: justify;
+                    text-align: center;
                     white-space: pre-line;
                 }
             }
@@ -202,7 +202,7 @@ $background-color_1: rgba(33, 33, 33, 0.9);
 
 .modal-close {
     font-size: 1.6rem;
-    position: fixed;
+    position: absolute;
     background-color: transparent;
     outline: none;
     border: 2px solid var(--accent-color);
@@ -221,6 +221,9 @@ $background-color_1: rgba(33, 33, 33, 0.9);
 }
 .modal-content {
 	color: var(--accent-color);
+	height: 100%;
+	padding-top: 7rem;
+    overflow-y: auto;
 }
 
 .modal-content h2 {
@@ -259,7 +262,6 @@ $background-color_1: rgba(33, 33, 33, 0.9);
 	margin: auto;
 	font-size: 1rem;
 	font-weight: 700;
-	display: inline-block;
 }
 
 .modal-more a:hover {
@@ -335,11 +337,6 @@ $background-color_1: rgba(33, 33, 33, 0.9);
     padding: 3rem;
 }
 
-
-
-.modal-image-container {
-	display: none;
-}
 .modal-image-container img {
 	width: 512px;
 	height: 512px;
