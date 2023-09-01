@@ -11,7 +11,7 @@ const skillsList = [
     { text: 'Gsap' },
     { text: 'Bootstrap' },
     { text: 'PHP' },
-    { text: 'Node.js' },
+    { text: 'NodeJs' },
     { text: 'Solidity' },
     { text: 'LAMP' },
     { text: 'API' },
