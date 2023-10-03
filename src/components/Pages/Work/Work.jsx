@@ -614,19 +614,23 @@ const Work = ({ scrub, lang, isMobile }) => {
                         <h3>Other creations</h3>
                     </article>
                     <article className="bg">
+                        <div className="overlay" />
                         <div className="bg-cmachance" />
                         <a href="https://cmachance.fr" target="_blank"><span className="dates">2019 - 2021</span>cmachance<span className="project-link">PHP 7 | Bootstrap | jQuery | MariaDb</span></a>
                     </article>
                     <article className="bg">
+                        <div className="overlay" />
                         <div className="bg-cmahdf" />
                         <a href="https://www.cma-hautsdefrance.fr/" target="_blank"><span className="dates">2020 - 2021</span>CMA HDF<span className="project-link">Wordpress</span></a>
                     </article>
                     <article className="bg">
+                        <div className="overlay" />
                         <div className="bg-reveleTonDestin" />
                         <a href="https://www.cma-hautsdefrance.fr/reveletondestin/" target="_blank"><span className="dates">2020 - 2021</span>Revele ton destin<span className="project-link">PHP 7 | HTML | CSS | JS
                         </span></a>
                     </article>
                     <article className="bg">
+                        <div className="overlay" />
                         <div className="bg-taxeApprentissage" />
                         <a href="https://cma-hautsdefrance.fr/versement-taxe-apprentissage/" target="_blank"><span className="dates">2020 - 2021</span>Taxe d'apprentissage<span className="project-link">PHP 7 | HTML | CSS | JS | API</span></a>
                     </article>
